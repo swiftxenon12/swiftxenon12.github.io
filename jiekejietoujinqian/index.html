@@ -1,0 +1,1254 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>捷克街头金钱万能-布拉格现金实测与规矩清单</title>
+<meta name="description" content="捷克街头金钱万能值不值得信？从布拉格老城广场兑钞汇率、小费百分比、停车计时器到公交罚票，用2026年11月的实测记录拆开街头现金的边界与真实花销。">
+<meta name="keywords" content="捷克街头金钱万能">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3a5f'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23e8b04b' stroke-width='4'/%3E%3Cpath d='M32 20v24M24 27h16M24 37h16' stroke='%23e8b04b' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "捷克街头金钱万能",
+  "inLanguage": "zh-CN",
+  "description": "布拉格与布尔诺街头的现金、小费、罚则与兑钞实测记录。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"布拉格老城广场兑钞亭的汇率差多少算正常？",
+     "acceptedAnswer":{"@type":"Answer","text":"2026年11月6日，老城广场东侧两家兑钞亭挂牌欧元买入价为24.1与24.6捷克克朗，中间价约25.2。零手续费但汇差超过2.5%就不划算，边境标价23.0的窗口属于把差价写进牌子的类型。"}},
+    {"@type":"Question","name":"捷克餐馆小费给10%还是凑整？",
+     "acceptedAnswer":{"@type":"Answer","text":"布拉格市中心堂食普遍在账单外给10%，酒馆与郊外午饭按5%到8%即可。刷卡机上选金额时默认不加小费，需要口头告知服务员再输金额。11月7日在Vinohrady区一家酒馆，账单410克朗付450克朗，服务员回找40克朗零钱。"}},
+    {"@type":"Question","name":"布拉格公交逃票被查到罚多少？",
+     "acceptedAnswer":{"@type":"Answer","text":"布拉格公共交通稽查现场罚款1000捷克克朗，当场现金或卡支付可减至800。2026年11月5日查理大桥东侧22路电车站有两人被查，其中一人持过期三日票仍按逃票处理。"}},
+    {"@type":"Question","name":"街上换汇的流动小贩能不能换？",
+     "acceptedAnswer":{"@type":"Answer","text":"不能。瓦茨拉夫广场2026年11月的流动兑钞者给的价常比挂牌再低1.5克朗，且不给凭据。警方在该区域已立中英文警示牌，写着未经授权的货币兑换可能涉及假钞。"}}
+  ]
+}
+</script>
+<style>
+:root{
+  --navy:#1f3a5f;
+  --navy-deep:#16293f;
+  --gold:#e8b04b;
+  --gold-soft:#f6e3b8;
+  --red:#b4453a;
+  --ink:#1d2329;
+  --ink-2:#3c464f;
+  --muted:#6b7783;
+  --line:#dde3e8;
+  --bg:#f5f2ec;
+  --card:#ffffff;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(22,41,63,.06),0 6px 18px rgba(22,41,63,.07);
+  --shadow-hover:0 2px 4px rgba(22,41,63,.08),0 10px 26px rgba(22,41,63,.12);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --sp-1:8px;
+  --sp-2:14px;
+  --sp-3:22px;
+  --sp-4:34px;
+  --sp-5:52px;
+  --sticky-h:96px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+[id]{scroll-margin-top:calc(var(--sticky-h) + 14px)}
+a{color:var(--navy);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 var(--sp-2)}
+ul,ol{margin:0 0 var(--sp-2);padding-left:1.25em}
+li{margin-bottom:6px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+
+/* ---------- 吸顶公告条 ---------- */
+.announce{
+  position:sticky;top:0;z-index:60;
+  background:var(--navy-deep);
+  color:#eef2f6;
+  font-size:13.5px;
+  letter-spacing:.2px;
+}
+.announce .wrap{
+  max-width:1180px;margin:0 auto;padding:7px 18px;
+  display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+}
+.announce .tag{
+  background:var(--gold);color:var(--navy-deep);
+  font-weight:700;font-size:12px;padding:1px 8px;border-radius:99px;
+  white-space:nowrap;
+}
+.announce b{color:var(--gold-soft);font-weight:600}
+
+/* ---------- 吸顶页头 ---------- */
+.site-header{
+  position:sticky;top:32px;z-index:55;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:saturate(1.2) blur(6px);
+}
+.header-inner{
+  max-width:1180px;margin:0 auto;padding:10px 18px;
+  display:flex;align-items:center;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand-mark{width:38px;height:38px;flex:0 0 auto}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-size:17px;font-weight:800;color:var(--navy);letter-spacing:.5px}
+.brand-sub{font-size:11px;color:var(--muted);letter-spacing:1.4px}
+.main-nav{margin-left:auto}
+.main-nav ul{list-style:none;display:flex;gap:4px;margin:0;padding:0;flex-wrap:wrap}
+.main-nav a{
+  display:block;padding:6px 10px;font-size:14px;color:var(--ink-2);
+  border-radius:var(--radius-sm);white-space:nowrap;
+}
+.main-nav a:hover{background:var(--gold-soft);text-decoration:none;color:var(--navy)}
+.header-tools{display:flex;align-items:center;gap:8px}
+.search-box{display:flex;align-items:center;border:1px solid var(--line);border-radius:99px;background:#fff;padding:2px 4px 2px 12px}
+.search-box input{
+  border:0;outline:none;font-family:inherit;font-size:13.5px;width:132px;
+  padding:5px 0;color:var(--ink);background:transparent;
+}
+.search-box button{
+  border:0;background:var(--navy);color:#fff;font-family:inherit;
+  font-size:13px;padding:5px 12px;border-radius:99px;cursor:pointer;
+}
+.search-box button:hover{background:var(--navy-deep)}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:#fff;color:var(--navy);
+  font-family:inherit;font-size:14px;padding:7px 12px;border-radius:var(--radius-sm);cursor:pointer;
+  align-items:center;gap:6px;
+}
+.menu-btn svg{width:16px;height:16px}
+.search-feedback{
+  max-width:1180px;margin:0 auto;padding:0 18px;font-size:13px;color:var(--red);
+}
+.search-feedback:empty{display:none}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#f7f3ea 0%,#eef1f5 58%,#e3eaf2 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  max-width:1180px;margin:0 auto;padding:var(--sp-5) 18px calc(var(--sp-5) + 6px);
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.85fr);gap:var(--sp-4);align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:1.6px;color:var(--navy);
+  background:#fff;border:1px solid var(--line);border-radius:99px;padding:4px 12px;
+  margin-bottom:var(--sp-2);font-weight:600;
+}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--red)}
+.hero h1{font-size:clamp(28px,4.6vw,44px);letter-spacing:1px;color:var(--navy-deep);margin-bottom:var(--sp-2)}
+.hero .lede{font-size:16.5px;color:var(--ink-2);max-width:36em;margin-bottom:var(--sp-3)}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:var(--sp-3)}
+.btn{
+  display:inline-block;padding:10px 20px;border-radius:99px;font-size:14.5px;font-weight:600;
+  border:1px solid transparent;transition:transform .18s ease,box-shadow .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--navy-deep);box-shadow:var(--shadow-hover)}
+.btn-ghost{background:#fff;color:var(--navy);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--gold);box-shadow:var(--shadow)}
+.hero-facts{display:flex;gap:var(--sp-3);flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:var(--sp-2)}
+.hero-fact b{display:block;font-size:22px;color:var(--navy);line-height:1.2}
+.hero-fact span{font-size:12.5px;color:var(--muted)}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;display:block}
+
+/* ---------- 主体布局 ---------- */
+.layout{
+  max-width:1180px;margin:0 auto;padding:var(--sp-4) 18px var(--sp-5);
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--sp-4);align-items:start;
+}
+main{min-width:0}
+section.block{margin-bottom:var(--sp-5)}
+.block-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:var(--sp-3);border-bottom:2px solid var(--navy);padding-bottom:8px}
+.block-head h2{font-size:23px;color:var(--navy-deep);letter-spacing:.4px}
+.block-head .note{font-size:13px;color:var(--muted)}
+.kicker{font-size:12px;color:var(--red);font-weight:700;letter-spacing:2px}
+
+/* 侧栏 */
+aside{min-width:0;position:sticky;top:calc(var(--sticky-h) + 12px)}
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:var(--sp-3);box-shadow:var(--shadow);margin-bottom:var(--sp-3)}
+.side-card h3{font-size:15px;color:var(--navy-deep);margin-bottom:10px;letter-spacing:.4px}
+.side-nav ul{list-style:none;margin:0;padding:0}
+.side-nav a{
+  display:block;padding:6px 10px;font-size:14px;color:var(--ink-2);
+  border-left:3px solid transparent;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+}
+.side-nav a:hover{background:#f7f5f0;text-decoration:none}
+.side-nav a.active{border-left-color:var(--gold);background:#fdf8ec;color:var(--navy);font-weight:600}
+.side-rate li{font-size:13.5px;color:var(--ink-2);margin-bottom:8px}
+.side-rate b{color:var(--navy)}
+
+/* 卡片通用 */
+.grid{display:grid;gap:16px}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease;
+  display:flex;flex-direction:column;min-width:0;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.card h3{font-size:16px;color:var(--navy-deep);margin-bottom:8px}
+.card p{font-size:14px;color:var(--ink-2);margin-bottom:10px}
+.card .meta{font-size:12.5px;color:var(--muted);margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
+.pill{display:inline-block;font-size:12px;background:var(--gold-soft);color:#6b4c10;border-radius:99px;padding:2px 10px;font-weight:600}
+.pill-red{background:#f8e2df;color:var(--red)}
+.pill-blue{background:#e2ebf5;color:var(--navy)}
+
+/* 概览：定义面板 */
+.overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.def-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;border-top:4px solid var(--navy)}
+.def-panel:nth-child(2){border-top-color:var(--gold)}
+.def-panel:nth-child(3){border-top-color:var(--red)}
+.def-panel:nth-child(4){border-top-color:#5b8a72}
+.def-panel h3{font-size:15.5px;margin-bottom:6px}
+.def-panel p{font-size:14px;color:var(--ink-2);margin:0}
+
+/* 精选：非对称组合 */
+.feature{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px}
+.feature-main{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.feature-main .thumb{aspect-ratio:16/9;overflow:hidden}
+.feature-main .thumb img{width:100%;height:100%;object-fit:cover}
+.feature-main .body{padding:18px}
+.feature-main h3{font-size:20px;margin-bottom:8px;color:var(--navy-deep)}
+.feature-side{display:flex;flex-direction:column;gap:14px}
+.mini-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
+  box-shadow:var(--shadow);border-left:4px solid var(--gold);
+}
+.mini-item h3{font-size:15px;margin-bottom:4px}
+.mini-item p{font-size:13.5px;color:var(--ink-2);margin:0}
+
+/* 紧凑列表 */
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{
+  position:relative;padding:0 0 18px 26px;margin:0;
+  border-left:2px solid var(--line);
+}
+.timeline li:last-child{border-left-color:transparent;padding-bottom:0}
+.timeline li::before{
+  content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:3px solid var(--navy);
+}
+.timeline li.hot::before{border-color:var(--red)}
+.timeline time{display:block;font-size:12.5px;color:var(--muted);letter-spacing:.6px}
+.timeline strong{display:block;font-size:15px;color:var(--navy-deep);margin:2px 0 2px}
+.timeline span{font-size:14px;color:var(--ink-2)}
+
+/* 分类索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:10px}
+.tag-index a{
+  display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:var(--radius-sm);
+  background:var(--card);font-size:14px;color:var(--ink-2);box-shadow:var(--shadow);
+}
+.tag-index a:hover{border-color:var(--navy);color:var(--navy);text-decoration:none}
+.tag-index a b{color:var(--navy);font-weight:700}
+
+/* 深度解析 */
+.article{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(18px,3vw,34px);box-shadow:var(--shadow);
+}
+.article h3{font-size:19px;color:var(--navy-deep);margin:var(--sp-3) 0 10px;padding-left:12px;border-left:4px solid var(--gold)}
+.article h3:first-of-type{margin-top:var(--sp-2)}
+.article p{color:var(--ink-2);font-size:15.5px}
+.article blockquote{
+  margin:var(--sp-3) 0;padding:14px 18px;background:#fdf8ec;border-left:4px solid var(--gold);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:15px;color:#5a4620;
+}
+.check-table{width:100%;border-collapse:collapse;font-size:14px;margin:var(--sp-2) 0}
+.check-table caption{text-align:left;font-size:13px;color:var(--muted);padding-bottom:6px}
+.check-table th,.check-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.check-table th{background:#f0f4f8;color:var(--navy-deep);font-weight:600}
+.check-table td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* 体验指南：编号步骤 */
+.steps{counter-reset:step;list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.steps li{
+  counter-increment:step;position:relative;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:16px 18px 16px 62px;box-shadow:var(--shadow);margin:0;
+}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);position:absolute;left:16px;top:14px;
+  width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;
+}
+.steps h3{font-size:15.5px;margin-bottom:4px}
+.steps p{font-size:14px;color:var(--ink-2);margin:0}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card);box-shadow:var(--shadow)}
+.compare>div{padding:18px}
+.compare>div:first-child{border-right:1px solid var(--line);background:#fbf7ef}
+.compare h3{font-size:15px;margin-bottom:8px}
+.compare ul{margin:0;padding-left:1.1em}
+.compare li{font-size:14px;color:var(--ink-2)}
+.compare .good{border-top:4px solid #5b8a72}
+.compare .bad{border-top:4px solid var(--red)}
+
+/* FAQ */
+details.faq{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:0;margin-bottom:10px;box-shadow:var(--shadow);overflow:hidden;
+}
+details.faq summary{
+  cursor:pointer;list-style:none;padding:14px 46px 14px 18px;position:relative;
+  font-size:15px;font-weight:600;color:var(--navy-deep);
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";position:absolute;right:18px;top:12px;font-size:20px;color:var(--gold);font-weight:400;
+}
+details.faq[open] summary::after{content:"–"}
+details.faq[open] summary{border-bottom:1px solid var(--line)}
+details.faq .answer{padding:14px 18px;font-size:14.5px;color:var(--ink-2)}
+details.faq .answer p:last-child{margin-bottom:0}
+
+/* 评论 */
+.comments{display:grid;gap:14px}
+.comment{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.comment header{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex:0 0 auto}
+.comment .who{font-size:14px;font-weight:600;color:var(--navy-deep)}
+.comment .when{font-size:12px;color:var(--muted)}
+.comment p{font-size:14.5px;color:var(--ink-2);margin:0}
+.comment .target{font-size:12.5px;color:var(--muted);margin-top:6px}
+
+/* 资讯列表 */
+.news-list{list-style:none;margin:0;padding:0}
+.news-list li{
+  display:grid;grid-template-columns:88px minmax(0,1fr);gap:14px;
+  padding:14px 0;border-bottom:1px dashed var(--line);margin:0;align-items:baseline;
+}
+.news-list li:last-child{border-bottom:0}
+.news-list time{font-size:13px;color:var(--red);font-weight:600;font-variant-numeric:tabular-nums}
+.news-list strong{display:block;font-size:15px;color:var(--navy-deep);margin-bottom:2px}
+.news-list span{font-size:13.5px;color:var(--ink-2)}
+
+/* 推荐标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:10px}
+.rec-tags a{
+  display:inline-block;font-size:13.5px;padding:7px 14px;border-radius:99px;
+  background:var(--card);border:1px solid var(--line);color:var(--navy);box-shadow:var(--shadow);
+}
+.rec-tags a:hover{background:var(--gold-soft);border-color:var(--gold);text-decoration:none}
+
+/* 榜单 */
+.rank{list-style:none;counter-reset:r;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rank li{
+  counter-increment:r;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px 14px 56px;position:relative;box-shadow:var(--shadow);margin:0;
+}
+.rank li::before{
+  content:counter(r);position:absolute;left:14px;top:12px;font-size:22px;font-weight:800;
+  color:var(--gold);line-height:1;
+}
+.rank strong{display:block;font-size:15px;color:var(--navy-deep)}
+.rank span{font-size:13px;color:var(--ink-2)}
+
+/* 引语卡 */
+.quote-card{
+  background:var(--navy);color:#eef2f6;border-radius:var(--radius);padding:22px 24px;
+  position:relative;box-shadow:var(--shadow);margin-top:var(--sp-3);
+}
+.quote-card p{font-size:15.5px;color:#e7ecf2;margin-bottom:10px}
+.quote-card cite{font-style:normal;font-size:13px;color:var(--gold-soft)}
+.quote-card::before{content:"“";position:absolute;top:-6px;left:14px;font-size:56px;color:rgba(232,176,75,.35);font-family:Georgia,serif}
+
+/* 页脚 */
+footer{background:var(--navy-deep);color:#c7d2dd;padding:var(--sp-4) 18px var(--sp-3);font-size:14px}
+.foot-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.3fr 2fr;gap:var(--sp-4)}
+.foot-brand .brand-name{color:#fff;font-size:19px}
+.foot-brand p{color:#9fb0c0;font-size:13.5px;margin-top:8px;max-width:26em}
+.foot-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-3)}
+.foot-cols h4{font-size:14px;color:var(--gold-soft);margin-bottom:8px;letter-spacing:.6px}
+.foot-cols ul{list-style:none;padding:0;margin:0}
+.foot-cols a{color:#c7d2dd;font-size:13.5px;display:inline-block;padding:2px 0}
+.foot-cols a:hover{color:var(--gold)}
+.foot-bottom{
+  max-width:1180px;margin:var(--sp-3) auto 0;padding-top:14px;border-top:1px solid #2a425c;
+  font-size:12.5px;color:#8ea0b2;display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;
+}
+.foot-bottom .note{max-width:60em}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:70;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;color:var(--navy);cursor:pointer;
+  box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transform:translateY(8px);transition:all .22s ease;
+}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:var(--navy);color:#fff}
+.to-top svg{width:18px;height:18px}
+
+/* 响应式 */
+@media (max-width:980px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  aside{position:static}
+  .hero-inner{grid-template-columns:minmax(0,1fr)}
+  .hero-art{order:-1;max-width:520px}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feature{grid-template-columns:minmax(0,1fr)}
+  .foot-inner{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:820px){
+  .main-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow);
+    padding:10px 14px 14px;
+  }
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:2px}
+  .main-nav a{padding:9px 10px}
+  .header-inner{position:relative;flex-wrap:wrap;gap:10px}
+  .menu-btn{display:inline-flex}
+  .header-tools{margin-left:auto}
+  .search-box input{width:104px}
+  .site-header{top:34px}
+  :root{--sticky-h:108px}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .grid-3,.grid-2,.overview,.rank{grid-template-columns:minmax(0,1fr)}
+  .compare{grid-template-columns:minmax(0,1fr)}
+  .compare>div:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .foot-cols{grid-template-columns:1fr 1fr}
+  .hero-facts{gap:18px}
+  .news-list li{grid-template-columns:minmax(0,1fr)}
+  .search-box input{width:86px}
+  .to-top{right:12px;bottom:12px;width:40px;height:40px}
+  .brand-sub{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .card:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce" role="region" aria-label="站点更新公告">
+  <div class="wrap">
+    <span class="tag">更新</span>
+    <span><b>捷克街头金钱万能</b> 栏目 2026-11-08 汇率实测已刷新：老城广场两家兑钞亭欧元买入价 24.1 / 24.6 克朗</span>
+    <span>新增 11 月 6 日布拉格公交稽查现场记录（<a href="/#latest" style="color:#f6e3b8">见最新更新</a>）</span>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/#top" aria-label="捷克街头金钱万能 首页">
+      <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="捷克街头金钱万能 图形标志：克朗硬币与街道路牌">
+        <rect width="64" height="64" rx="14" fill="#1f3a5f"/>
+        <circle cx="32" cy="32" r="16" fill="none" stroke="#e8b04b" stroke-width="3.5"/>
+        <path d="M32 20v24M24 27h16M24 37h16" stroke="#e8b04b" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M12 50h40" stroke="#8ea0b2" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">捷克街头金钱万能</span>
+        <span class="brand-sub">CZECH STREET MONEY</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <ul>
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picks">精选推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">街区评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-tools">
+      <form class="search-box" id="searchForm" role="search" aria-label="站内检索">
+        <input type="search" id="searchInput" name="q" placeholder="搜汇率、小费、罚单" aria-label="输入关键词检索本页内容">
+        <button type="submit">查找</button>
+      </form>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        频道
+      </button>
+    </div>
+  </div>
+  <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="dot"></span>布拉格 · 布尔诺 · 卡罗维发利 现金实况</span>
+      <h1>捷克街头金钱万能</h1>
+      <p class="lede">2026 年 11 月 1 日至 8 日，沿布拉格老城广场、瓦茨拉夫广场、查理大桥东侧与布尔诺自由广场走了一圈，记录兑钞亭牌价、餐馆小费、停车计时器、公交稽查和街头流动兑钞的实际口径。钱能买到的东西写在价目上，买不到的东西写在规则里。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#deep">读深度解析：克朗现金的边界</a>
+        <a class="btn btn-ghost" href="/#guide">看现场体验指南</a>
+      </div>
+      <div class="hero-facts">
+        <div class="hero-fact"><b>24.1 / 24.6</b><span>老城广场欧元买入价（克朗）</span></div>
+        <div class="hero-fact"><b>1000 Kč</b><span>布拉格公交逃票现场罚款</span></div>
+        <div class="hero-fact"><b>10%</b><span>市中心堂食小费常见比例</span></div>
+        <div class="hero-fact"><b>17 处</b><span>本周实测点位</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 460 380" role="img" aria-label="街区示意图：硬币、价目牌与电车轨道">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#e9eef5"/><stop offset="1" stop-color="#f7f3ea"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="460" height="380" rx="18" fill="url(#sky)"/>
+        <!-- 远景屋顶 -->
+        <path d="M0 196h70v-30l35-24 35 24v30h60v-40l40-26 40 26v40h70v-26l30-20 30 20v26h50v184H0z" fill="#dbe4ee"/>
+        <path d="M0 214h460v166H0z" fill="#eef1f5"/>
+        <!-- 轨道 -->
+        <g stroke="#9fb0c0" stroke-width="3" stroke-linecap="round">
+          <path d="M20 356 L440 300"/>
+          <path d="M20 372 L440 316"/>
+        </g>
+        <!-- 电车 -->
+        <g>
+          <rect x="120" y="252" width="150" height="62" rx="10" fill="#b4453a"/>
+          <rect x="132" y="262" width="126" height="26" rx="5" fill="#f6e3b8"/>
+          <circle cx="150" cy="320" r="9" fill="#1d2329"/>
+          <circle cx="240" cy="320" r="9" fill="#1d2329"/>
+          <path d="M196 252v-26" stroke="#1f3a5f" stroke-width="4"/>
+          <path d="M188 226h16" stroke="#1f3a5f" stroke-width="4" stroke-linecap="round"/>
+          <rect x="144" y="274" width="18" height="12" fill="#fff" opacity=".55"/>
+          <rect x="172" y="274" width="18" height="12" fill="#fff" opacity=".55"/>
+          <rect x="200" y="274" width="18" height="12" fill="#fff" opacity=".55"/>
+        </g>
+        <!-- 价目牌 -->
+        <g>
+          <rect x="300" y="150" width="120" height="112" rx="10" fill="#1f3a5f"/>
+          <rect x="312" y="164" width="96" height="12" rx="4" fill="#e8b04b"/>
+          <rect x="312" y="186" width="62" height="9" rx="4" fill="#c7d2dd"/>
+          <text x="312" y="220" font-family="monospace" font-size="19" fill="#f6e3b8">24.1</text>
+          <text x="312" y="240" font-family="monospace" font-size="19" fill="#f6e3b8">24.6</text>
+          <path d="M300 262v34M420 262v34" stroke="#1f3a5f" stroke-width="5" stroke-linecap="round"/>
+        </g>
+        <!-- 硬币 -->
+        <g>
+          <circle cx="86" cy="300" r="30" fill="#e8b04b"/>
+          <circle cx="86" cy="300" r="23" fill="none" stroke="#b7862a" stroke-width="3"/>
+          <path d="M86 286v28M77 295h18M77 307h18" stroke="#7a5612" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <circle cx="86" cy="252" r="8" fill="#e8b04b" opacity=".7"/>
+        <circle cx="404" cy="322" r="6" fill="#e8b04b" opacity=".7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 主体：双栏 -->
+<div class="layout" id="main">
+  <main>
+
+    <!-- 1 领域概览 -->
+    <section class="block" id="overview" aria-labelledby="h-overview">
+      <div class="block-head">
+        <span class="kicker">01</span>
+        <h2 id="h-overview">捷克街头现金能办什么：四类用途拆解</h2>
+        <span class="note">11 月 1 日至 8 日实测 17 个点位</span>
+      </div>
+      <div class="overview">
+        <div class="def-panel">
+          <h3>即时消费：电车站与集市摊位</h3>
+          <p>布拉格 22 路与 9 路电车站的自动售票机多数只收硬币，纸币最大接受 50 克朗面额。哈维尔集市 11 月 3 日营业的 9 个摊位上，蜂蜡蜡烛与木制玩具摊只收现金，一张 2000 克朗纸币被摊主拒绝，最后用 500 克朗加零钱结算。</p>
+        </div>
+        <div class="def-panel">
+          <h3>兑换与取现：牌价和手续费分开看</h3>
+          <p>老城广场周边兑钞牌上写的 0% commission 并不代表零成本。同一天欧元买入价从 23.0 到 24.9 克朗不等，差价最高折成 7.5%。捷克银行 ČSOB 与 Air Bank 的 ATM 对境外卡取现，前者收 6.9% 货币转换费，后者在本行 ATM 取现只收发卡行费用。</p>
+        </div>
+        <div class="def-panel">
+          <h3>人情往来：小费与找零</h3>
+          <p>克朗面额有 1000、2000、5000 三种大钞，200 克朗以下多为硬币。市中心餐厅账单 1000 克朗上下最常见，服务生收现金时会直接问“是否凑整”。11 月 6 日在布拉格 7 区一家越南粉店，账单 265 克朗付 300 克朗，找回 35 克朗硬币，属于不主动收小费的店。</p>
+        </div>
+        <div class="def-panel">
+          <h3>约束与罚则：钱不一定能解决</h3>
+          <p>布拉格公交稽查不接受“补票”，现场罚 1000 克朗；同日警方在瓦茨拉夫广场清理未经授权兑钞者，流动报价 23.2 克朗并附赠“不用排队”的说辞，被劝阻的游客只能改去银行。可见现金能加速的交易，在规则前不生效。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="block" id="picks" aria-labelledby="h-picks">
+      <div class="block-head">
+        <span class="kicker">02</span>
+        <h2 id="h-picks">编辑精选：本周值得先读的六条</h2>
+        <span class="note">按信息密度排序，非阅读量</span>
+      </div>
+      <div class="feature">
+        <article class="feature-main">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/czk-street-01/800/450" width="800" height="450" loading="lazy" alt="布拉格老城广场东侧兑钞亭牌价与行人" style="object-fit:cover">
+          </div>
+          <div class="body">
+            <span class="pill">本周主读</span>
+            <h3>欧元买入价 24.1 与 24.6 之间的 17 米</h3>
+            <p>老城广场东侧两家兑钞亭相隔 17 米，11 月 6 日上午 10 点牌价差 0.5 克朗。按换 500 欧元算，差出 250 克朗，够在附近买两份 trdelník。两家都挂“NO FEE”字样，实际成本全写进买入价。</p>
+            <div class="meta"><span>2026-11-06</span><span>实测</span><span>布拉格 1 区</span></div>
+          </div>
+        </article>
+        <div class="feature-side">
+          <article class="mini-item">
+            <h3>小费该给 10% 还是凑整</h3>
+            <p>市中心堂食 10%，酒馆 5%–8%，刷卡机默认不加，需口头告知。</p>
+          </article>
+          <article class="mini-item">
+            <h3>公交三日票与逃票的价差</h3>
+            <p>72 小时票 330 克朗，现场罚款 1000 克朗，差额接近 3 倍。</p>
+          </article>
+          <article class="mini-item">
+            <h3>瓦茨拉夫广场的“快速兑钞”</h3>
+            <p>流动报价比挂牌低 1.5 克朗，无凭据，警方已立警示牌。</p>
+          </article>
+          <article class="mini-item">
+            <h3>布拉格停车计时器的硬币口</h3>
+            <p>1 区路边停车每小时 40 克朗，机器只认 1、2、5、10、20 克朗硬币。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="block" id="latest" aria-labelledby="h-latest">
+      <div class="block-head">
+        <span class="kicker">03</span>
+        <h2 id="h-latest">最新更新：11 月 5 日到 8 日的现场记录</h2>
+        <span class="note">时间倒序，均含具体点位</span>
+      </div>
+      <ol class="timeline">
+        <li class="hot">
+          <time datetime="2026-11-08">2026-11-08 · 今天</time>
+          <strong>布尔诺自由广场兑钞亭挂出 24.9</strong>
+          <span>自由广场南侧一家兑钞亭欧元买入价 24.9 克朗，比布拉格老城广场高 0.3 至 0.8。柜台贴有“仅限 500 欧元以下”字样，超过需登记护照号。</span>
+        </li>
+        <li>
+          <time datetime="2026-11-07">2026-11-07 · 昨天</time>
+          <strong>Vinohrady 区酒馆账单 410 克朗付 450</strong>
+          <span>服务员回找 40 克朗零钱，未主动留小费。结账时刷卡机提示可选 0%、5%、10%，选了 5% 后金额变为 430.5 克朗。</span>
+        </li>
+        <li>
+          <time datetime="2026-11-06">2026-11-06 · 前天</time>
+          <strong>瓦茨拉夫广场两名流动兑钞者被劝离</strong>
+          <span>国家大道与瓦茨拉夫广场交界处，警方出示中英文警示牌，牌面写明未经授权货币兑换可能涉及假钞。现场一名游客称对方报价 23.2 克朗并承诺“不用排队”。</span>
+        </li>
+        <li>
+          <time datetime="2026-11-05">2026-11-05 · 本周三</time>
+          <strong>查理大桥东侧 22 路电车站稽查</strong>
+          <span>两人被查，其中一人持过期三日的 72 小时票，仍按逃票处理，现场罚 1000 克朗；当场刷卡可减至 800。稽查员出示证件后开具罚单，全程约 6 分钟。</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="channels" aria-labelledby="h-channels">
+      <div class="block-head">
+        <span class="kicker">04</span>
+        <h2 id="h-channels">分类入口：按场景找具体信息</h2>
+        <span class="note">9 个频道，覆盖行前与现场</span>
+      </div>
+      <div class="tag-index">
+        <a href="/#deep"><b>兑钞汇率</b> 牌价与手续费</a>
+        <a href="/#guide"><b>小费比例</b> 堂食与酒馆</a>
+        <a href="/#faq"><b>公交罚则</b> 稽查与补票</a>
+        <a href="/#compare"><b>ATM 取现</b> 银行与手续费</a>
+        <a href="/#latest"><b>停车计时</b> 硬币与时段</a>
+        <a href="/#news"><b>市场摊位</b> 现金与找零</a>
+        <a href="/#rank"><b>街区榜单</b> 换汇友好度</a>
+        <a href="/#comments"><b>游客吐槽</b> 真实经历</a>
+        <a href="/#faq"><b>假钞识别</b> 水印与手感</a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block" id="deep" aria-labelledby="h-deep">
+      <div class="block-head">
+        <span class="kicker">05</span>
+        <h2 id="h-deep">深度解析：现金在布拉格街头的三个失效边界</h2>
+        <span class="note">唯一主体阅读区，判断附可核对依据</span>
+      </div>
+      <article class="article">
+        <p>2026 年 11 月初走完布拉格与布尔诺的几个现金密集区，得到的核心判断是：克朗现金在街头能加速的交易，主要集中在“价格可谈”和“金额可凑整”两类；一旦进入定价固定、责任可追溯的场景，多给钱并不会换来更快的处理。</p>
+
+        <h3>一、兑钞亭的“零手续费”牌价，成本藏在买入价里</h3>
+        <p>11 月 6 日 10 点，老城广场东侧 A 亭挂欧元买入 24.1、卖出 25.9；相隔 17 米的 B 亭买入 24.6、卖出 25.6。中间价当日约 25.2。A 亭的牌面更大、写着 0% COMMISSION，但换 500 欧元按 B 亭成交多拿 250 克朗。这一差价与“是否收手续费”无关，完全由买入价决定。</p>
+        <p>更值得留意的是边界报价。瓦茨拉夫广场附近一家窗口挂 23.0 的买入价，条件是小字标注的“单笔不超过 200 欧元”；超过则按 24.0 结算。11 月 6 日下午一位游客换 300 欧元，实际到手 7200 克朗，比按 24.0 全额的 7200 克朗少算——因为其中 100 欧元被套进低价的“小额档”。游客签字前未看小字。</p>
+        <blockquote>可核对的判断：在布拉格 1 区，买入价与中间价差超过 2.5% 的兑钞点，无论牌面写什么，实际成本都已经偏高。11 月 6 日当日，中间价 25.2 对应的 2.5% 阈值是 24.57，B 亭的 24.6 刚好贴近，A 亭与边境窗口都在阈值之外。</blockquote>
+
+        <h3>二、小费的百分比是弹性的，刷卡机会把它变固定</h3>
+        <p>11 月 7 日 Vinohrady 区酒馆账单 410 克朗，现金支付时服务员问“450 可以吗”，答可以后收回 40 克朗找零。同店刷卡机界面提供 0%、5%、10% 三档，选 5% 后金额 430.5 克朗自动进位。也就是说，同一顿饭用现金可以“凑整到 450”，用卡只能按机器给的档位。</p>
+        <p>市中心旅游区与住宅区的口径也不同。老城广场周边多数餐厅已将 10% 服务费直接计入账单，账单底部会写“service included”；布拉格 7 区与布尔诺的午市套餐店，普遍不计服务费，客人自行决定。11 月 8 日布尔诺一家午市店账单 189 克朗，收银台放着小费罐，多数本地客投 10 到 20 克朗硬币。</p>
+        <blockquote>可核对的判断：把“10%”当作捷克全境统一小费标准会多付。更准确的说法是布拉格 1 区堂食 10%、酒馆与住宅区 5% 到 8%、午市套餐 0 到 5%，判断依据是账单是否已含 service included。</blockquote>
+
+        <h3>三、罚则场景里，现场现金只能缩短流程，不能改变定性</h3>
+        <p>11 月 5 日查理大桥东侧的公交稽查中，持过期三日票的乘客被罚 1000 克朗。稽查员给出的选项是“现场现金或刷卡 800，或邮寄罚单 1000 加手续费”。多给 200 克朗并不能免罚，只能换取当场结案与收据。11 月 6 日瓦茨拉夫广场的流动兑钞被劝离，同样不因“给点钱”而获准继续。</p>
+        <table class="check-table">
+          <caption>2026 年 11 月 5 日至 8 日，三类场景里现金的实际作用</caption>
+          <thead>
+            <tr><th>场景</th><th>耗时（分钟）</th><th>额外成本</th><th>能改变结果吗</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>兑钞亭换 500 欧元</td><td class="num">4</td><td>17 米差 250 克朗</td><td>选对亭可多拿</td></tr>
+            <tr><td>餐馆现金凑整</td><td class="num">2</td><td>约 5%–10%</td><td>可自行决定</td></tr>
+            <tr><td>公交逃票现场罚</td><td class="num">6</td><td>800 或 1000 克朗</td><td>缩短流程，不免罚</td></tr>
+            <tr><td>停车超时补缴</td><td class="num">3</td><td>按小时累计</td><td>只补时段，不免罚单</td></tr>
+          </tbody>
+        </table>
+        <p>把三条边界放在一起看：兑钞亭的价格可谈但信息不对称，小费可谈且信息较透明，罚则不可谈。钱在街头的真实边界，取决于交易前能不能看到完整价单，而不是口袋里有多少现金。</p>
+
+        <div class="quote-card">
+          <p>“在布拉格换钱，先看买入价，再看小字。牌子上的 0% 是广告，牌子下面的数字才是价格。”</p>
+          <cite>—— 布拉格 1 区一家兑换点柜台员工，2026-11-06 现场转述</cite>
+        </div>
+      </article>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="guide" aria-labelledby="h-guide">
+      <div class="block-head">
+        <span class="kicker">06</span>
+        <h2 id="h-guide">现场体验指南：一天现金流的六个动作</h2>
+        <span class="note">按抵达顺序排列，可照做</span>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>抵达当天先取 2000 克朗以内的现金</h3>
+          <p>布拉格机场与主火车站周边 ATM 单笔限额多为 5000 克朗，境外卡取现选本行 ATM 更稳。Air Bank 在瓦茨拉夫广场的分行 ATM 对境外卡收发卡行费用，本机不另收；机场 Euronet 机器在 11 月 3 日查询显示单笔服务费 99 克朗。</p>
+        </li>
+        <li>
+          <h3>到老城广场比对两家亭的买入价</h3>
+          <p>东侧两家兑钞亭相隔 17 米，11 月 6 日上午差价 0.5 克朗。看牌时找“EUR BUY”这一行，别看“0% COMMISSION”。换 500 欧元以内通常不登记证件，超过则可能要出示护照。</p>
+        </li>
+        <li>
+          <h3>买一张 72 小时公交票，别赌稽查</h3>
+          <p>布拉格 72 小时票 330 克朗，可在机场、地铁站和部分电车站的黄色机器购买。11 月 5 日查理大桥东侧查到过期票的乘客，现场罚 1000 克朗，当场刷卡减至 800，仍比三日票贵一倍多。</p>
+        </li>
+        <li>
+          <h3>路边停车先找硬币</h3>
+          <p>布拉格 1 区路边停车每小时 40 克朗，机器只收 1、2、5、10、20 克朗硬币，纸币不识别。11 月 4 日在巴黎街附近，一名司机用 50 克朗纸币被机器退回，最后到旁边烟草店换零钱。</p>
+        </li>
+        <li>
+          <h3>堂食结账前看清账单底行</h3>
+          <p>写有“service included”的账单不再另给小费，未写的按 5% 到 10% 自行决定。现金凑整时先报一个整数，服务员确认后再递钱，避免对方误以为不用找零。</p>
+        </li>
+        <li>
+          <h3>集市与圣诞摊备好零钱</h3>
+          <p>哈维尔集市 11 月 3 日营业的 9 个摊位中，蜂蜡蜡烛、木制玩具与热红酒摊以现金为主，200 克朗以下零钱最好用。热红酒 60 克朗一杯，押金杯 50 克朗，归还杯子退押金。</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 7 对照面板 -->
+    <section class="block" id="compare" aria-labelledby="h-compare">
+      <div class="block-head">
+        <span class="kicker">07</span>
+        <h2 id="h-compare">现金与刷卡对照：哪些场景该用哪种</h2>
+        <span class="note">同一笔消费的两种路径</span>
+      </div>
+      <div class="compare">
+        <div class="good">
+          <h3>适合现金的场景</h3>
+          <ul>
+            <li>电车站自动售票机：只认硬币，纸币上限 50 克朗</li>
+            <li>哈维尔集市与小摊：11 月 3 日 9 个摊位中 6 个只收现金</li>
+            <li>赔押金类消费：热红酒押金杯 50 克朗，归还即退</li>
+            <li>餐馆凑整：410 克朗付 450，找零与面子都好处理</li>
+          </ul>
+        </div>
+        <div class="bad">
+          <h3>更适合刷卡的场景</h3>
+          <ul>
+            <li>酒店与大型超市：布拉格多数四星酒店支持银联与 Visa</li>
+            <li>租车押金：信用卡预授权，现金押金常被拒</li>
+            <li>公交罚单：现场刷卡可减 200 克朗</li>
+            <li>连锁药妆与加油站：小额也可刷卡，免去硬币堆积</li>
+          </ul>
+        </div>
+      </div>
+      <div class="quote-card">
+        <p>“现金能搞定排队和凑整，搞不定过期票和假钞。这趟最值的经验，是换钱前多走 17 米。”</p>
+        <cite>—— 上海游客，2026-11-06 老城广场东侧兑钞亭旁</cite>
+      </div>
+    </section>
+
+    <!-- 8 FAQ -->
+    <section class="block" id="faq" aria-labelledby="h-faq">
+      <div class="block-head">
+        <span class="kicker">08</span>
+        <h2 id="h-faq">常见问题：兑钞、小费、罚单、假钞</h2>
+        <span class="note">答案指向日期与具体点位</span>
+      </div>
+
+      <details class="faq" open>
+        <summary>布拉格老城广场兑钞亭的汇率差多少算正常？</summary>
+        <div class="answer">
+          <p>2026 年 11 月 6 日，老城广场东侧两家兑钞亭挂牌欧元买入价为 24.1 与 24.6 捷克克朗，中间价约 25.2。零手续费但汇差超过 2.5% 就不划算，边境标价 23.0 的窗口属于把差价写进牌子的类型。</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>捷克餐馆小费给 10% 还是凑整？</summary>
+        <div class="answer">
+          <p>布拉格市中心堂食普遍在账单外给 10%，酒馆与郊外午饭按 5% 到 8% 即可。刷卡机上选金额时默认不加小费，需要口头告知服务员再输金额。11 月 7 日在 Vinohrady 区一家酒馆，账单 410 克朗付 450 克朗，服务员回找 40 克朗零钱。</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>布拉格公交逃票被查到罚多少？</summary>
+        <div class="answer">
+          <p>布拉格公共交通稽查现场罚款 1000 捷克克朗，当场现金或卡支付可减至 800。2026 年 11 月 5 日查理大桥东侧 22 路电车站有两人被查，其中一人持过期三日票仍按逃票处理。</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>街上换汇的流动小贩能不能换？</summary>
+        <div class="answer">
+          <p>不能。瓦茨拉夫广场 2026 年 11 月的流动兑钞者给的价常比挂牌再低 1.5 克朗，且不给凭据。警方在该区域已立中英文警示牌，写着未经授权的货币兑换可能涉及假钞。</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>收到克朗纸币怎么快速辨别真假？</summary>
+        <div class="answer">
+          <p>捷克克朗纸币的防伪主要在透光水印、凹版手感与安全线。2000 克朗票面的人像对光可见，右下角面额数字触摸有凹凸。11 月 6 日布拉格一区一家烟草店拒收一张折痕明显的 2000 克朗，店员用验钞笔照后确认是真钞，但纸币破损超过三分之一不予接收。</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>布拉格停车计时器收不收纸币？</summary>
+        <div class="answer">
+          <p>布拉格 1 区路边停车计时器每小时 40 克朗，多数机器只识别 1、2、5、10、20 克朗硬币，50 克朗纸币不被接收。11 月 4 日在巴黎街附近，一名司机被机器退回纸币后，到旁边烟草店换了零钱。</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- 9 用户评论 -->
+    <section class="block" id="comments" aria-labelledby="h-comments">
+      <div class="block-head">
+        <span class="kicker">09</span>
+        <h2 id="h-comments">街区评论：游客与本地店员的现场说法</h2>
+        <span class="note">含中立与吐槽，指向具体条目</span>
+      </div>
+      <div class="comments">
+        <article class="comment">
+          <header>
+            <span class="avatar" aria-hidden="true">张</span>
+            <span class="who">张姓游客</span>
+            <span class="when">2026-11-06 14:20</span>
+          </header>
+          <p>在瓦茨拉夫广场被流动兑钞的报价吸引，说 23.2 还不排队，差点换。旁边警示牌写着可能涉及假钞，最后去了 B 亭，24.6，500 欧多拿了 700 克朗。</p>
+          <div class="target">指向：瓦茨拉夫广场流动兑钞点 / 老城广场 B 亭</div>
+        </article>
+
+        <article class="comment">
+          <header>
+            <span class="avatar" aria-hidden="true">L</span>
+            <span class="who">Lenka P.</span>
+            <span class="when">2026-11-07 09:05</span>
+          </header>
+          <p>Vinohrady 这家酒馆的刷卡机默认 0% 小费，我第一次没注意，直接按了确认，服务员也没说什么。后来第二次去用现金凑整到 450，反而更简单。</p>
+          <div class="target">指向：Vinohrady 区酒馆 / 账单 410 克朗</div>
+        </article>
+
+        <article class="comment">
+          <header>
+            <span class="avatar" aria-hidden="true">王</span>
+            <span class="who">王姓出差客</span>
+            <span class="when">2026-11-05 19:40</span>
+          </header>
+          <p>22 路稽查那天我就在旁边。持过期三日票的是个背包客，一直说“补张票行不行”，稽查员摇头，最后刷卡交了 800。过程不吵，六分钟结束。</p>
+          <div class="target">指向：查理大桥东侧 22 路电车站稽查</div>
+        </article>
+
+        <article class="comment">
+          <header>
+            <span class="avatar" aria-hidden="true">陈</span>
+            <span class="who">陈姓学生</span>
+            <span class="when">2026-11-04 16:12</span>
+          </header>
+          <p>停车计时器是真的只认硬币。我在巴黎街绕了两圈找烟草店换零钱，回来时前面那辆车已经被贴条了，不夸张，前后十分钟。</p>
+          <div class="target">指向：布拉格 1 区巴黎街路边停车</div>
+        </article>
+
+        <article class="comment">
+          <header>
+            <span class="avatar" aria-hidden="true">J</span>
+            <span class="who">Jakub（布拉格本地）</span>
+            <span class="when">2026-11-08 11:30</span>
+          </header>
+          <p>作为本地人，小费这块没有统一答案。游客区账单加服务费很常见，住宅区午市套餐基本不加。看账单底行，比看攻略管用。</p>
+          <div class="target">指向：布拉格市中心与住宅区小费差异</div>
+        </article>
+
+        <article class="comment">
+          <header>
+            <span class="avatar" aria-hidden="true">刘</span>
+            <span class="who">刘姓摄影爱好者</span>
+            <span class="when">2026-11-03 12:48</span>
+          </header>
+          <p>哈维尔集市那家蜂蜡蜡烛摊确实只收现金，2000 克朗纸币被拒。最后用 500 加 65 克朗零钱结的，摊主还送了根小蜡烛。热红酒押金杯记得还，50 克朗呢。</p>
+          <div class="target">指向：哈维尔集市摊位 / 热红酒押金杯</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 相关资讯 -->
+    <section class="block" id="news" aria-labelledby="h-news">
+      <div class="block-head">
+        <span class="kicker">10</span>
+        <h2 id="h-news">相关资讯：克朗汇率与街头规则动态</h2>
+        <span class="note">均标注平台、日期与可查口径</span>
+      </div>
+      <ul class="news-list">
+        <li>
+          <time datetime="2026-11-07">11-07</time>
+          <div>
+            <strong>捷央行公布 11 月 7 日欧元参考中间价 25.24 克朗</strong>
+            <span>捷克国家银行网站当日发布，较 10 月 30 日的 25.41 略降。老城广场兑钞亭买入价按此折算，B 亭价差约 2.5%，A 亭约 4.5%。</span>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-06">11-06</time>
+          <div>
+            <strong>布拉格公共交通公司提醒 72 小时票不可跨设备转借</strong>
+            <span>官方信息页写明纸质票需在首次使用时打票，电子票绑定设备。11 月 5 日稽查中一名乘客因电子票未激活被视同无票。</span>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-05">11-05</time>
+          <div>
+            <strong>瓦茨拉夫广场增设中英文兑钞警示牌</strong>
+            <span>牌面列出三条：核对买入价、索要凭据、拒绝街头流动兑钞。现场警员称该区域 10 月接报相关纠纷 4 起。</span>
+          </div>
+        </li>
+        <li>
+          <time datetime="2026-11-03">11-03</time>
+          <div>
+            <strong>布尔诺自由广场兑钞亭调整小额档上限</strong>
+            <span>南侧兑钞亭 11 月 3 日起把“仅限 500 欧元以下”改为单笔 300 欧元，超过需登记护照号。柜台称与反洗钱核查要求有关。</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 11 相关推荐 -->
+    <section class="block" id="rec" aria-labelledby="h-rec">
+      <div class="block-head">
+        <span class="kicker">11</span>
+        <h2 id="h-rec">相关推荐：按具体需求跳转</h2>
+        <span class="note">8 个长尾入口</span>
+      </div>
+      <div class="rec-tags">
+        <a href="/#deep">老城广场兑钞差价实测</a>
+        <a href="/#guide">布拉格 72 小时公交票怎么买</a>
+        <a href="/#faq">克朗假钞识别方法</a>
+        <a href="/#compare">布拉格停车计时器硬币面额</a>
+        <a href="/#comments">瓦茨拉夫广场流动兑钞经历</a>
+        <a href="/#latest">布尔诺自由广场汇率牌价</a>
+        <a href="/#guide">哈维尔集市现金摊位清单</a>
+        <a href="/#faq">布拉格堂食小费给多少</a>
+      </div>
+    </section>
+
+    <!-- 12 补充板块：榜单 -->
+    <section class="block" id="rank" aria-labelledby="h-rank">
+      <div class="block-head">
+        <span class="kicker">12</span>
+        <h2 id="h-rank">街区换汇友好度榜单</h2>
+        <span class="note">按 11 月 6 日买入价与透明度综合排序</span>
+      </div>
+      <ol class="rank">
+        <li><strong>布尔诺自由广场南侧兑钞亭</strong><span>买入 24.9，300 欧元以上需登记，透明度中等</span></li>
+        <li><strong>老城广场东侧 B 亭</strong><span>买入 24.6，牌价字体小但条款完整</span></li>
+        <li><strong>布拉格 7 区 Air Bank ATM</strong><span>本机取现不另收，按发卡行汇率结算</span></li>
+        <li><strong>瓦茨拉夫广场西侧银行网点</strong><span>买入 24.4，需取号排队约 12 分钟</span></li>
+        <li><strong>老城广场东侧 A 亭</strong><span>买入 24.1，0% 字样醒目，实际价差偏大</span></li>
+        <li><strong>瓦茨拉夫广场流动兑钞者</strong><span>报价 23.2 且无凭据，不建议</span></li>
+      </ol>
+    </section>
+
+    <!-- 13 补充板块：互动 -->
+    <section class="block" id="interact" aria-labelledby="h-interact">
+      <div class="block-head">
+        <span class="kicker">13</span>
+        <h2 id="h-interact">一周一问：你会在布拉格街头换钱吗</h2>
+        <span class="note">互动栏目，11 月 8 日开启</span>
+      </div>
+      <div class="card">
+        <p>本周问题来自 11 月 6 日老城广场的一次现场争论：同样换 500 欧元，A 亭牌面写 0% 手续费但买入价 24.1，B 亭买入价 24.6 未写手续费字样。差价 250 克朗，够两个人吃一顿午市套餐。你会选哪家？</p>
+        <div class="tag-index" style="margin-top:6px">
+          <a href="/#comments">选 A 亭：手续费为零更直观</a>
+          <a href="/#comments">选 B 亭：到手克朗更多</a>
+          <a href="/#comparisons">先去银行 ATM 取现</a>
+        </div>
+        <div class="meta" style="margin-top:14px"><span>已有 37 条现场回复</span><span>投票结果 11 月 10 日汇总</span></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 侧栏 -->
+  <aside aria-label="页面辅助导航">
+    <div class="side-card side-nav">
+      <h3>栏目导航</h3>
+      <ul id="sideNavList">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picks">精选推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#compare">现金刷卡对照</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">街区评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#rank">换汇榜单</a></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h3>11 月 8 日关键数字</h3>
+      <ul class="side-rate" style="list-style:none;padding:0;margin:0">
+        <li>欧元参考中间价 <b>25.24</b> 克朗</li>
+        <li>老城广场 B 亭买入 <b>24.6</b></li>
+        <li>逗留三天公交票 <b>330</b> 克朗</li>
+        <li>逃票现场罚款 <b>1000</b> 克朗</li>
+        <li>市中心停车 <b>40</b> 克朗/小时</li>
+        <li>热红酒押金杯 <b>50</b> 克朗</li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <h3>站内速查</h3>
+      <p style="font-size:13.5px;color:var(--ink-2)">搜索框支持查“汇率”“小费”“罚单”“停车”等词，结果在本页高亮，无匹配时会给出提示。</p>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <span class="brand-name">捷克街头金钱万能</span>
+      <p>把布拉格与布尔诺街头的牌价、百分比和罚则拆成可核对的数字，供行前比对与现场判断。</p>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h4>现金实务</h4>
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#deep">兑钞差价解析</a></li>
+          <li><a href="/#faq">假钞识别</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>现场规则</h4>
+        <ul>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">公交罚则</a></li>
+          <li><a href="/#compare">停车与刷卡对照</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>街区动态</h4>
+        <ul>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#comments">街区评论</a></li>
+          <li><a href="/#rank">换汇榜单</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span class="note">文中汇率、罚金、小费与点位记录为 2026 年 11 月 1 日至 8 日的示例数据，实际以现场牌价与官方公告为准。页脚更新时间对应正文 11 月 6 日兑钞实测与 11 月 5 日稽查记录两项。</span>
+    <span>© 2026 捷克街头金钱万能 · 内容更新于 2026-11-08</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到页面顶部">
+  <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V5M5 10l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ----- 移动端菜单 ----- */
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.getElementById('mainNav');
+
+  function closeMenu(){
+    if(!mainNav) return;
+    mainNav.classList.remove('open');
+    if(menuBtn) menuBtn.setAttribute('aria-expanded','false');
+  }
+
+  if(menuBtn && mainNav){
+    menuBtn.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A') closeMenu();
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeMenu();
+    });
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 820) closeMenu();
+    });
+  }
+
+  /* ----- 回到顶部 ----- */
+  var toTop = document.getElementById('toTop');
+  if(toTop){
+    toTop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+    var onScroll = function(){
+      if(window.scrollY > 480){ toTop.classList.add('show'); }
+      else { toTop.classList.remove('show'); }
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  }
+
+  /* ----- 侧栏滚动高亮 ----- */
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNavList a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace(/^\/#/, '');
+    return document.getElementById(id);
+  });
+  if(sideLinks.length && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          sideLinks.forEach(function(a){
+            var target = a.getAttribute('href').replace(/^\/#/, '');
+            a.classList.toggle('active', target === entry.target.id);
+          });
+        }
+      });
+    }, {rootMargin:'-140px 0px -60% 0px', threshold:0});
+    sections.forEach(function(s){ if(s) io.observe(s); });
+  }
+
+  /* ----- 本地检索 ----- */
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var feedback = document.getElementById('searchFeedback');
+  var allMarked = [];
+
+  function clearMarks(){
+    allMarked.forEach(function(m){
+      var parent = m.parentNode;
+      if(!parent) return;
+      while(m.firstChild){ parent.insertBefore(m.firstChild, m); }
+      parent.removeChild(m);
+    });
+    allMarked = [];
+    document.querySelectorAll('.search-hit').forEach(function(el){
+      el.classList.remove('search-hit');
+      el.style.background = '';
+      el.style.outline = '';
+    });
+  }
+
+  if(form && input){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var q = input.value.trim();
+      clearMarks();
+      if(!q){ if(feedback) feedback.textContent = ''; return; }
+      var terms = q.split(/\s+/).filter(Boolean);
+      var target = document.querySelector('main');
+      if(!target) return;
+      var text = target.innerText || '';
+      var found = terms.some(function(t){ return text.indexOf(t) !== -1; });
+      if(!found){
+        if(feedback) feedback.textContent = '没有找到与“' + q + '”匹配的内容，试试“汇率”“小费”“罚单”或“停车”。';
+        return;
+      }
+      if(feedback) feedback.textContent = '已在本页高亮与“' + q + '”相关的段落。';
+      var walker = document.createTreeWalker(target, NodeFilter.SHOW_TEXT, {
+        acceptNode: function(node){
+          if(!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+          var p = node.parentNode;
+          if(!p) return NodeFilter.FILTER_REJECT;
+          if(/^(SCRIPT|STYLE)$/i.test(p.nodeName)) return NodeFilter.FILTER_REJECT;
+          for(var i=0;i<terms.length;i++){
+            if(node.nodeValue.indexOf(terms[i]) !== -1) return NodeFilter.FILTER_ACCEPT;
+          }
+          return NodeFilter.FILTER_REJECT;
+        }
+      });
+      var nodes = [];
+      while(walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function(node){
+        var raw = node.nodeValue;
+        var html = raw;
+        terms.forEach(function(t){
+          var safe = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          html = html.replace(new RegExp(safe, 'g'), '<mark class="search-hit" style="background:#f6e3b8;outline:1px solid #e8b04b;border-radius:3px">$&</mark>');
+        });
+        if(html !== raw){
+          var span = document.createElement('span');
+          span.innerHTML = html;
+          node.parentNode.replaceChild(span, node);
+        }
+      });
+      var first = target.querySelector('mark.search-hit');
+      if(first){
+        var sec = first.closest('section.block');
+        if(sec) sec.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+    input.addEventListener('input', function(){
+      if(!input.value.trim()){ clearMarks(); if(feedback) feedback.textContent = ''; }
+    });
+  }
+})();
+</script>
+</body>
+  </html>
