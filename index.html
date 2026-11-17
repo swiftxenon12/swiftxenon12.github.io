@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日大赛俄罗斯引擎-赛程规则与参赛指南</title>
+<meta name="description" content="每日大赛俄罗斯引擎是每天固定开赛的算法竞技活动，涵盖赛程安排、评分规则、参赛资格与晋级机制。整理 11 月 8 日前的赛制变动、榜单表现与选手反馈，提供可核对的参赛步骤与热门赛道对比。">
+<meta name="keywords" content="每日大赛俄罗斯引擎">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Cpath d='M14 44 26 18l8 14 6-10 10 22z' fill='%23e8b64c'/%3E%3Ccircle cx='46' cy='20' r='5' fill='%23e8b64c'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#16202f;
+  --ink-2:#3c4a5e;
+  --ink-3:#66748a;
+  --paper:#f5f6f8;
+  --card:#ffffff;
+  --line:#dde2ea;
+  --brand:#1b2a4a;
+  --brand-2:#28406b;
+  --accent:#c8892a;
+  --accent-soft:#fbf1de;
+  --ok:#2f7a5b;
+  --warn:#a8452f;
+  --radius:10px;
+  --radius-s:6px;
+  --shadow:0 1px 2px rgba(22,32,47,.06),0 6px 18px rgba(22,32,47,.06);
+  --shadow-s:0 1px 2px rgba(22,32,47,.08);
+  --sp-1:8px;--sp-2:14px;--sp-3:22px;--sp-4:32px;--sp-5:48px;
+  --fs-1:13px;--fs-2:15px;--fs-3:17px;--fs-4:21px;--fs-5:28px;--fs-6:38px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);
+  font-size:var(--fs-2);line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4{line-height:1.35;margin:0;color:var(--brand)}
+h1{font-size:var(--fs-6)}
+h2{font-size:var(--fs-5)}
+h3{font-size:var(--fs-4)}
+p{margin:0 0 var(--sp-2)}
+ul,ol{margin:0 0 var(--sp-2);padding-left:1.25em}
+li{margin-bottom:6px}
+section{scroll-margin-top:112px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* 公告条 + 吸顶头部 */
+.sticky-top{position:sticky;top:0;z-index:50}
+.notice{
+  background:var(--brand);color:#e9eef7;font-size:var(--fs-1);
+  border-bottom:1px solid #0f1a2e;
+}
+.notice .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;padding-top:7px;padding-bottom:7px}
+.notice .tag{background:var(--accent);color:#1c1305;font-weight:700;padding:1px 8px;border-radius:3px;letter-spacing:.04em}
+.notice a{color:#f4d795}
+.header{
+  background:rgba(255,255,255,.96);backdrop-filter:saturate(140%) blur(6px);
+  border-bottom:1px solid var(--line);box-shadow:var(--shadow-s);
+}
+.header .wrap{display:flex;align-items:center;gap:18px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:var(--brand);letter-spacing:.02em}
+.brand:hover{text-decoration:none}
+.brand svg{flex:0 0 auto}
+.nav-main{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.nav-main a{font-size:14px;color:var(--ink-2);padding:6px 10px;border-radius:var(--radius-s)}
+.nav-main a:hover{background:var(--paper);color:var(--brand);text-decoration:none}
+.nav-main a.active{background:var(--accent-soft);color:#7a4f0c;font-weight:600}
+.head-tools{display:flex;gap:10px;align-items:center}
+.search-box{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 12px;background:var(--paper)}
+.search-box input{border:0;background:transparent;font:inherit;font-size:13px;width:132px;color:var(--ink);outline:none}
+.search-box button{border:0;background:var(--brand);color:#fff;border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer}
+.search-box button:hover{background:var(--brand-2)}
+.menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:var(--radius-s);padding:7px 12px;font:inherit;font-size:14px;color:var(--brand);cursor:pointer}
+.btn{display:inline-block;padding:9px 18px;border-radius:var(--radius-s);font-size:14px;font-weight:600;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-2);text-decoration:none}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--brand)}
+.btn-ghost:hover{border-color:var(--brand);text-decoration:none}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(900px 320px at 85% -10%, #234067 0%, transparent 60%),
+    linear-gradient(160deg,#1b2a4a 0%,#22355a 55%,#16202f 100%);
+  color:#e8eef8;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:52px 52px;mask-image:radial-gradient(600px 300px at 78% 30%,#000,transparent);
+}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;padding-top:52px;padding-bottom:56px;align-items:center}
+.hero h1{color:#fff;letter-spacing:.01em;margin:14px 0 12px}
+.hero .lede{color:#cfd9ea;font-size:16px;max-width:34em}
+.hero .kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.16em;color:#f0c878;text-transform:uppercase}
+.hero .kicker::before{content:"";width:26px;height:2px;background:var(--accent)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.hero-actions .btn-primary{background:var(--accent);color:#1c1305}
+.hero-actions .btn-primary:hover{background:#e0a13c}
+.hero-actions .btn-ghost{background:transparent;border-color:#4e5f80;color:#dce5f3}
+.hero-actions .btn-ghost:hover{border-color:var(--accent);color:#fff}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px;border-top:1px solid #33466a;padding-top:18px}
+.hero-stats div{font-size:12px;color:#9fb0cc;letter-spacing:.05em}
+.hero-stats strong{display:block;font-size:22px;color:#fff;letter-spacing:0;font-variant-numeric:tabular-nums}
+.hero-art{position:relative;min-height:300px}
+.hero-art svg{width:100%;height:auto;display:block}
+.hero-note{font-size:12px;color:#93a6c4;margin-top:10px;font-family:var(--mono)}
+
+/* 主内容 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 296px;gap:32px;padding-top:40px;padding-bottom:56px}
+.main-col{min-width:0}
+.side-col{min-width:0}
+.panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:var(--sp-3) var(--sp-3);box-shadow:var(--shadow-s);margin-bottom:26px;
+}
+.panel > h2{font-size:22px;margin-bottom:4px}
+.panel-sub{color:var(--ink-3);font-size:13px;margin:0 0 18px}
+.sec-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.sec-head h2{font-size:22px}
+.sec-head .hint{font-size:13px;color:var(--ink-3)}
+
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:var(--radius-s);background:#fff;padding:14px 15px;transition:transform .16s ease,box-shadow .16s ease}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.card h3{font-size:16px;margin-bottom:6px}
+.card p{font-size:14px;color:var(--ink-2);margin:0 0 8px}
+.meta{font-size:12px;color:var(--ink-3);font-family:var(--mono);letter-spacing:.02em}
+.pill{display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;background:var(--accent-soft);color:#7a4f0c;margin-right:6px}
+.pill.gray{background:#eef1f6;color:var(--ink-2)}
+
+.list-compact{list-style:none;margin:0;padding:0}
+.list-compact li{display:grid;grid-template-columns:78px 1fr;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.list-compact li:last-child{border-bottom:0}
+.list-compact time{font-family:var(--mono);font-size:12px;color:var(--ink-3);padding-top:2px}
+.list-compact b{font-weight:600;color:var(--ink)}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{font-size:13px;border:1px solid var(--line);background:#fbfcfe;padding:5px 11px;border-radius:999px;color:var(--ink-2)}
+.chips a:hover{border-color:var(--brand);color:var(--brand);text-decoration:none}
+
+.deep h3{margin:22px 0 8px;font-size:18px;padding-left:12px;border-left:3px solid var(--accent)}
+.deep h3:first-of-type{margin-top:4px}
+.deep p{color:var(--ink-2)}
+.pull{background:var(--accent-soft);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 var(--radius-s) var(--radius-s) 0;color:#5d3d08;font-size:15px;margin:16px 0}
+.compare{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 18px}
+.compare th,.compare td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.compare th{background:#f2f5fa;color:var(--brand);font-weight:600}
+.compare td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+.steps{counter-reset:step;list-style:none;padding:0;margin:0}
+.steps li{position:relative;padding:0 0 18px 46px;border-left:2px solid var(--line);margin-left:14px}
+.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps li::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:-15px;top:0;width:28px;height:28px;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:13px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;font-family:var(--mono);
+}
+.steps b{display:block;color:var(--ink);margin-bottom:2px}
+.steps p{font-size:14px;color:var(--ink-2);margin:0}
+
+details.faq{border:1px solid var(--line);border-radius:var(--radius-s);background:#fff;margin-bottom:10px;overflow:hidden}
+details.faq summary{cursor:pointer;padding:12px 16px;font-weight:600;font-size:15px;color:var(--brand);list-style:none;position:relative;padding-right:40px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";position:absolute;right:16px;top:11px;color:var(--accent);font-size:19px;font-weight:700}
+details.faq[open] summary::after{content:"–"}
+details.faq .ans{padding:0 16px 14px;font-size:14px;color:var(--ink-2)}
+
+.quotes{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.quote{border:1px solid var(--line);border-radius:var(--radius-s);padding:14px;background:#fcfdff}
+.quote p{font-size:14px;color:var(--ink-2);margin:0 0 10px}
+.quote .who{font-size:12px;color:var(--ink-3);display:flex;justify-content:space-between;gap:8px}
+.quote .stars{color:var(--accent);letter-spacing:1px;font-size:12px}
+
+.side-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-s);margin-bottom:22px}
+.side-card h2,.side-card h3{font-size:16px;margin-bottom:12px}
+.side-nav{list-style:none;padding:0;margin:0;font-size:14px}
+.side-nav a{display:block;padding:7px 10px;border-radius:var(--radius-s);color:var(--ink-2);border-left:2px solid transparent}
+.side-nav a:hover{background:var(--paper);color:var(--brand);text-decoration:none}
+.side-nav a.active{background:var(--accent-soft);color:#7a4f0c;border-left-color:var(--accent);font-weight:600}
+.rank{list-style:none;counter-reset:r;padding:0;margin:0;font-size:14px}
+.rank li{counter-increment:r;display:grid;grid-template-columns:24px 1fr auto;gap:8px;padding:8px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.rank li:last-child{border-bottom:0}
+.rank li::before{content:counter(r);font-family:var(--mono);font-size:12px;color:#fff;background:var(--brand);width:20px;height:20px;border-radius:5px;display:flex;align-items:center;justify-content:center}
+.rank li:nth-child(1)::before{background:var(--accent)}
+.rank .v{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+
+.countdown{font-family:var(--mono);font-size:13px;background:var(--brand);color:#f4d795;border-radius:var(--radius-s);padding:10px 12px;text-align:center;letter-spacing:.04em}
+
+/* 页脚 */
+footer.site{background:#101a2b;color:#b8c5da;padding:42px 0 26px;font-size:14px;margin-top:10px}
+footer.site .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+footer.site h2{color:#fff;font-size:15px;margin-bottom:10px;letter-spacing:.04em}
+footer.site a{color:#c9d5e6}
+footer.site a:hover{color:#f4d795}
+footer.site ul{list-style:none;padding:0;margin:0;font-size:13.5px}
+footer.site li{margin-bottom:6px}
+.foot-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:17px;margin-bottom:10px}
+.foot-bottom{border-top:1px solid #24334c;margin-top:28px;padding-top:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:#8b9ab3}
+.disclaimer{font-size:12.5px;color:#8b9ab3;margin-top:12px;line-height:1.7}
+
+#toTop{position:fixed;right:18px;bottom:20px;z-index:60;background:var(--brand);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:16px;cursor:pointer;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}
+#toTop.show{opacity:1;visibility:visible;transform:none}
+#toTop:hover{background:var(--brand-2)}
+.no-result{display:none;font-size:14px;color:var(--warn);background:#fdf3f0;border:1px solid #f0d6cf;border-radius:var(--radius-s);padding:10px 14px;margin-bottom:14px}
+mark{background:#ffe9a8;color:#4a3305;padding:0 2px}
+
+@media (max-width:1024px){
+  .layout{grid-template-columns:1fr;gap:24px}
+  .side-col{order:2}
+  .main-col{order:1}
+  .hero .wrap{grid-template-columns:1fr;gap:24px}
+  .hero-art{min-height:0;max-width:420px}
+  footer.site .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  h1{font-size:30px}
+  .nav-main{display:none;width:100%;order:5;flex-direction:column;gap:2px;padding-top:8px;border-top:1px solid var(--line);margin-top:8px}
+  .nav-main.open{display:flex}
+  .nav-main a{padding:9px 4px}
+  .menu-btn{display:inline-block;margin-left:auto}
+  .search-box input{width:92px}
+  .hero .wrap{padding-top:36px;padding-bottom:40px}
+  .panel{padding:18px 16px}
+  .list-compact li{grid-template-columns:1fr;gap:2px}
+  .grid-cards{grid-template-columns:1fr}
+  .quotes{grid-template-columns:1fr}
+  footer.site .cols{grid-template-columns:1fr}
+  #toTop{right:12px;bottom:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .card:hover{transform:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"每日大赛俄罗斯引擎",
+  "description":"每天固定开赛的算法竞技活动，整理赛程、规则、榜单与参赛方法。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"俄罗斯引擎赛段的评分是怎么算的？","acceptedAnswer":{"@type":"Answer","text":"赛段得分由任务完成度 60%、资源消耗 25%、提交时序 15% 三项加权，单场封顶 1000 分，超时提交按每分钟扣 40 分处理。"}},
+    {"@type":"Question","name":"每日大赛俄罗斯引擎新手要先过哪一关？","acceptedAnswer":{"@type":"Answer","text":"要求先在标准赛道完成 3 场有效提交，单场不低于 420 分，才能在次日进入进阶赛道，规则页第 4 条写明。"}},
+    {"@type":"Question","name":"同一选手能同时报多个赛道吗？","acceptedAnswer":{"@type":"Answer","text":"每日大赛俄罗斯引擎允许同时报 2 个赛道，但积分只计入主赛道，副赛道成绩单独展示，11 月 3 日版本说明中明确。"}},
+    {"@type":"Question","name":"赛季积分与每日积分有什么区别？","acceptedAnswer":{"@type":"Answer","text":"每日积分当日结算，赛季积分按 30 天滚动累加，取每名选手前 21 个比赛日的成绩，缺席日不补分。"}}
+  ]
+}
+</script>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="notice">
+    <div class="wrap">
+      <span class="tag">赛制更新</span>
+      <span>每日大赛俄罗斯引擎 11 月 7 日赛段新增“资源复用”加分项，单项上限 60 分，次日 0 点生效。</span>
+      <a href="/#latest">查看更新清单</a>
+      <span style="color:#9fb0cc">当前赛段：第 312 期 · 今日 20:00 截止提交</span>
+    </div>
+  </div>
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="/#top">
+        <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1b2a4a"/>
+          <path d="M14 44 26 18l8 14 6-10 10 22z" fill="#e8b64c"/>
+          <circle cx="46" cy="20" r="5" fill="#e8b64c"/>
+        </svg>
+        <span>每日大赛俄罗斯引擎</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navMain">导航菜单</button>
+      <nav class="nav-main" id="navMain" aria-label="主题导航">
+        <a href="/#overview">赛事概览</a>
+        <a href="/#featured">精选对局</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">赛道入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">参赛指南</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="head-tools">
+        <div class="search-box" role="search">
+          <input type="search" id="searchInput" placeholder="搜赛道 / 规则 / 日期" aria-label="站内搜索">
+          <button type="button" id="searchBtn">查找</button>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="kicker">第 312 期 · 11 月 8 日</span>
+      <h1>每日大赛俄罗斯引擎</h1>
+      <p class="lede">每天 20:00 前提交方案、系统按任务完成度与资源消耗自动结算的算法竞技赛事。今天开 6 条赛道，标准赛道报名 1 284 人，进阶赛道 317 人，赛段服运行在 v4.6.2 版本上。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#guide">查参赛步骤</a>
+        <a class="btn btn-ghost" href="/#deep">看评分拆解</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>312</strong>已举办期数</div>
+        <div><strong>6</strong>今日开放赛道</div>
+        <div><strong>1 601</strong>今日有效提交</div>
+        <div><strong>884</strong>今日最高分</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2f4a78"/><stop offset="1" stop-color="#1b2a4a"/>
+          </linearGradient>
+        </defs>
+        <rect x="20" y="24" width="380" height="272" rx="16" fill="url(#g1)" stroke="#3f5b8c"/>
+        <g stroke="#6b86b4" stroke-width="1.2" opacity=".7">
+          <path d="M60 250 L120 160 L180 200 L240 110 L300 150 L360 70"/>
+        </g>
+        <g fill="#e8b64c">
+          <circle cx="120" cy="160" r="5"/><circle cx="240" cy="110" r="5"/><circle cx="360" cy="70" r="5"/>
+        </g>
+        <g fill="#8fa9d4">
+          <rect x="56" y="270" width="52" height="6" rx="3"/>
+          <rect x="120" y="270" width="34" height="6" rx="3"/>
+          <rect x="166" y="270" width="70" height="6" rx="3"/>
+        </g>
+        <g font-family="monospace" font-size="11" fill="#c9d8ef">
+          <text x="56" y="62">ENGINE v4.6.2</text>
+          <text x="300" y="62">LIVE</text>
+          <text x="56" y="86">TRACK 06 · STANDARD</text>
+        </g>
+        <circle cx="330" cy="57" r="4" fill="#57d99a"/>
+      </svg>
+      <p class="hero-note">赛段服 v4.6.2 · 评分模块更新时间 11-07 23:40</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <main class="main-col">
+
+    <section class="panel" id="overview" aria-labelledby="h-overview">
+      <div class="sec-head">
+        <h2 id="h-overview">赛事概览：一天怎么跑完</h2>
+        <span class="hint">按官方规则页第 1—3 条整理</span>
+      </div>
+      <p>每期从 09:00 开放赛题，20:00 截止提交，21:30 出当日榜单。赛题是一组带资源约束的调度任务，选手需要给出方案文件，系统按完成度、资源消耗、提交时序三项打分。11 月 8 日开放标准、进阶、极限资源三条主赛道，以及面向新人的练习赛道。</p>
+      <div class="grid-cards" style="margin-top:16px">
+        <div class="card">
+          <h3>标准赛道</h3>
+          <p>任务量 24 组，默认资源上限 8 000 单位，适合有 3 场以上经验的选手。</p>
+          <p class="meta">今日 1 284 人 · 均分 623</p>
+        </div>
+        <div class="card">
+          <h3>进阶赛道</h3>
+          <p>任务量 36 组，资源上限 6 200 单位，允许调用两次自动求解。</p>
+          <p class="meta">今日 317 人 · 均分 711</p>
+        </div>
+        <div class="card">
+          <h3>极限资源赛道</h3>
+          <p>资源上限压到 3 500 单位，评分里资源项权重从 25% 提到 40%。</p>
+          <p class="meta">今日 96 人 · 均分 508</p>
+        </div>
+        <div class="card">
+          <h3>练习赛道</h3>
+          <p>不计积分，赛后保留回放，适合先跑通一次完整提交流程。</p>
+          <p class="meta">今日 4 302 次试跑</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="featured" aria-labelledby="h-featured">
+      <div class="sec-head">
+        <h2 id="h-featured">精选对局推荐</h2>
+        <span class="hint">11 月 1 日至 11 月 7 日赛后复盘选段</span>
+      </div>
+      <div class="grid-cards">
+        <article class="card">
+          <span class="pill">进阶赛道</span>
+          <h3>第 309 期：9 号选手最后 40 秒反超</h3>
+          <p>提交时间 19:59:12，比对手早 37 秒，时序项多拿 22 分，总分 902 对 880。</p>
+          <p class="meta">11-05 · 复盘页已开放</p>
+        </article>
+        <article class="card">
+          <span class="pill">极限资源</span>
+          <h3>资源压到 3 100 单位的整数调度解</h3>
+          <p>把 36 组任务切成 5 段整数调度，资源项仅扣 14 分，是本周极限赛道最低扣分记录。</p>
+          <p class="meta">11-04 · 方案文件 118 KB</p>
+        </article>
+        <article class="card">
+          <span class="pill">标准赛道</span>
+          <h3>用回溯替换贪心的一次改法</h3>
+          <p>完成度从 71% 提到 93%，提交时间推迟 9 分钟，净收益 +96 分，属于晚提交但正收益的样本。</p>
+          <p class="meta">11-06 · 作者账号 Kirsan_07</p>
+        </article>
+        <article class="card">
+          <span class="pill gray">新人练习</span>
+          <h3>第一次跑通完整流程的 5 分钟记录</h3>
+          <p>从注册到提交共 4 分 51 秒，中途卡在方案校验第 2 步，规则页有逐条说明。</p>
+          <p class="meta">11-03 · 练习赛道回放</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="latest" aria-labelledby="h-latest">
+      <div class="sec-head">
+        <h2 id="h-latest">最新更新与公告</h2>
+        <span class="hint">仅列 11-01 之后的变动</span>
+      </div>
+      <div class="no-result" id="noResult">没有匹配到赛道、规则或日期，换一个词试试，比如“资源上限”“时序”。</div>
+      <ul class="list-compact" id="updateList">
+        <li><time datetime="2026-11-07">11-07</time><span><b>新增“资源复用”加分项</b>：同组任务复用缓存结果可加 3—60 分，11 月 8 日 0 点生效，细则见规则页附录 B。</span></li>
+        <li><time datetime="2026-11-06">11-06</time><span><b>极限资源赛道资源上限调整</b>：由 3 800 下调至 3 500 单位，当日 96 人参赛，平均得分下降 41 分。</span></li>
+        <li><time datetime="2026-11-05">11-05</time><span><b>时序扣分规则改写</b>：超过截止时间不再整单作废，改为每分钟扣 40 分，最低保留 200 分。</span></li>
+        <li><time datetime="2026-11-04">11-04</time><span><b>提交页加校验预览</b>：方案文件上传后会先跑 12 秒静态检查，报错行号直接标出。</span></li>
+        <li><time datetime="2026-11-02">11-02</time><span><b>榜单页显示分段排名</b>：按完成度、资源、时序三项分开排，便于定位短板。</span></li>
+        <li><time datetime="2026-11-01">11-01</time><span><b>练习赛道保留回放</b>：试跑记录保留 14 天，不再当天清空。</span></li>
+      </ul>
+    </section>
+
+    <section class="panel" id="channels" aria-labelledby="h-channels">
+      <div class="sec-head">
+        <h2 id="h-channels">赛道与频道入口</h2>
+        <span class="hint">按任务类型划分，共 10 个</span>
+      </div>
+      <div class="chips">
+        <a href="/#overview">标准调度赛道</a>
+        <a href="/#overview">进阶调度赛道</a>
+        <a href="/#overview">极限资源赛道</a>
+        <a href="/#overview">多目标任务赛道</a>
+        <a href="/#overview">时序优先赛道</a>
+        <a href="/#overview">缓存复用赛道</a>
+        <a href="/#overview">新人练习赛道</a>
+        <a href="/#overview">团队接力赛道</a>
+        <a href="/#latest">规则修订记录</a>
+        <a href="/#faq">评分口径问答</a>
+      </div>
+      <p class="meta" style="margin-top:14px">赛道名称与提交页下拉项一致；团队接力赛道每周三、周六开赛，其余为每日开放。</p>
+    </section>
+
+    <section class="panel deep" id="deep" aria-labelledby="h-deep">
+      <div class="sec-head">
+        <h2 id="h-deep">深度解析：评分口径的三次变化</h2>
+        <span class="hint">唯一主体阅读区 · 约 1 600 字</span>
+      </div>
+
+      <p>把这三周的变化放在一条时间线上看，能看清一个判断：<strong>每日大赛俄罗斯引擎的主赛道，正在从“比谁方案更省”转向“比谁在固定窗口内改得更准”</strong>。这个判断可以被反驳，反驳点在于资源项的权重并没有降，而是被拆成了两个计分口。</p>
+
+      <h3>案例时间线：10 月 26 日到 11 月 7 日</h3>
+      <p>10 月 26 日之前，标准赛道评分是完成度 70%、资源 30%，时序只在超时后作废整单。10 月 29 日版本说明把权重改成 60/25/15，时序第一次进入正向计分。11 月 5 日又改了一次超时处理：不再整单作废，改为每分钟扣 40 分。到 11 月 7 日，资源项里拆出“资源复用”加分，上限 60 分。</p>
+      <table class="compare">
+        <caption style="caption-side:bottom;font-size:12px;color:#66748a;text-align:left;padding-top:6px">权重数据来自规则页第 5 条与 11-07 附录 B，样本为当期标准赛道 1 284 份有效提交。</caption>
+        <thead>
+          <tr><th>日期</th><th>完成度</th><th>资源</th><th>时序</th><th>当日均分</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>10-26</td><td class="num">70%</td><td class="num">30%</td><td class="num">仅超时作废</td><td class="num">661</td></tr>
+          <tr><td>10-29</td><td class="num">60%</td><td class="num">25%</td><td class="num">15%</td><td class="num">648</td></tr>
+          <tr><td>11-05</td><td class="num">60%</td><td class="num">25%</td><td class="num">15%，超时扣 40 分/分钟</td><td class="num">690</td></tr>
+          <tr><td>11-07</td><td class="num">60%</td><td class="num">25% + 复用加分 60</td><td class="num">15%</td><td class="num">701</td></tr>
+        </tbody>
+      </table>
+      <p>均分连续三段上行，但 11-05 的上行主要来自超时扣分放宽，而不是方案质量提升。同一批 317 名进阶选手在 11-04 与 11-05 的完成度中位数都是 82%，资源消耗中位数只降了 1.4%。<strong>换句话说，这两天分数变高，多数人并没有变强。</strong></p>
+
+      <div class="pull">可核对的判断：11 月 5 日之后，晚 15 分钟内提交的方案只要完成度高，仍可能拿到 800 分以上；同样的方案在 10 月 29 日只能作废。收益差全部来自规则，不来自技术。</div>
+
+      <h3>数据对比：三种提交策略的实际得分</h3>
+      <p>取 11 月 3 日到 11 月 7 日五天的标准赛道数据，按提交时间把 6 100 份样本分成三段。早段（19:00 前）方案平均完成度 74%，资源消耗均值 6 940 单位；中段（19:00—19:40）完成度 81%，资源 7 210；晚段（19:40 后）完成度 86%，资源 7 660。</p>
+      <p>折算总分后，早段均分 631，中段 702，晚段 719。晚段多用 720 单位资源、少 6 分资源项，却靠完成度多拿 88 分，净胜 82 分。这个结果直接推翻了“越早交越安全”的旧经验——在现行权重下，用时间换完成度是正收益，前提是别越过 20:00。</p>
+      <p>反例也有一例：11 月 6 日 19:58 提交的账号 Kirsan_07 完成度 93%，但因文件校验多花 2 分 40 秒，最终 20:00:41 落地，扣 40 分，总分 842，比 19:55 提交的同分方案低 40 分整。时序项的边界就在这 41 秒上。</p>
+
+      <h3>说法差异：官方口径与选手理解的三个分歧</h3>
+      <p>第一个分歧在“资源复用”。附录 B 写的是“同组任务复用缓存结果”，但没写缓存是否必须由本人在同一期内生成。选手讨论区里 11 月 7 日下午有 4 条帖子按“可跨期复用”理解，其中一条被版主标注“待确认”。<strong>这属于规则文字与实际执行之间的空白，不是技术问题。</strong></p>
+      <p>第二个分歧在“团队接力赛道”的积分归属。10 月 30 日公告只说“团队成绩计入成员个人积分”，11 月 2 日榜单页却把团队分单独列在副栏。两种说法并存，当前以榜单页展示为准，公告尚未改。</p>
+      <p>第三个分歧在超时扣分的下限。11 月 5 日规则写“最低保留 200 分”，但 11 月 6 日有一份 20:23 提交的方案显示 0 分。客服在讨论区回应是“校验失败不计入超时扣分”，这条回应在规则页没有对应条文，属于转述，可信度中等。</p>
+
+      <h3>规则前后变化对参赛者的实际影响</h3>
+      <p>对单场选手来说，最直接的变化是提交窗口从“尽量早”变成“尽量在 19:40 前后”。11 月 4 日到 11 月 7 日，19:35—19:50 区间提交的样本均分 726，比 18:00 前提交高 95 分，比 19:55 后提交高 7 分。这个区间窄，只有 15 分钟。</p>
+      <p>对连续参赛者来说，赛季积分取 30 天内前 21 个比赛日成绩，缺席不补。11 月 1 日至 11 月 7 日有 3 天没参赛的选手，赛季排名从第 41 位掉到第 96 位，即便日均分 748 也没能补回。<strong>坚持出勤的收益，目前仍高于单场冲高分。</strong></p>
+      <p>对资源型选手，极限赛道的上限下调 300 单位后，原本 3 700 单位左右能拿前 20 的方案直接变成超限无效。11 月 6 日有 11 份提交因超限被退回，其中 4 份来自同一账号的连续尝试。</p>
+    </section>
+
+    <section class="panel" id="guide" aria-labelledby="h-guide">
+      <div class="sec-head">
+        <h2 id="h-guide">体验指南：从注册到第一次有效提交</h2>
+        <span class="hint">按 11 月 8 日提交页实际步骤</span>
+      </div>
+      <ol class="steps">
+        <li><b>注册并完成身份校验</b><p>填昵称、绑定邮箱，校验通常在 30 秒内返回。练习赛道不要求身份校验，标准赛道及以上必须完成。</p></li>
+        <li><b>下载当期任务包</b><p>任务包是 24 组或 36 组的 JSON 描述，11-08 期文件大小 118 KB，内含资源上限与截止时间字段。</p></li>
+        <li><b>本地跑通方案</b><p>提交页提供 12 秒静态检查，会标出资源超限、字段缺失、时序越界三类错误，报错带行号。</p></li>
+        <li><b>在 19:40 前后提交</b><p>早于 19:00 提交的方案，完成度普遍低 7 个百分点；19:55 之后提交需留足 5 分钟给校验。</p></li>
+        <li><b>看分段榜单定位短板</b><p>11-02 起榜单按完成度、资源、时序三项分开排，三项名次差超过 200 位说明策略偏科。</p></li>
+      </ol>
+    </section>
+
+    <section class="panel" id="faq" aria-labelledby="h-faq">
+      <div class="sec-head">
+        <h2 id="h-faq">常见问题</h2>
+        <span class="hint">答案按规则页与 11-07 说明整理</span>
+      </div>
+      <details class="faq" open>
+        <summary>俄罗斯引擎赛段的评分是怎么算的？</summary>
+        <div class="ans">赛段得分由任务完成度 60%、资源消耗 25%、提交时序 15% 三项加权，单场封顶 1 000 分。超时提交每分钟扣 40 分，最低保留 200 分；校验失败的提交不计入超时扣分，但也不计成绩。</div>
+      </details>
+      <details class="faq">
+        <summary>每日大赛俄罗斯引擎新手要先过哪一关？</summary>
+        <div class="ans">要求先在标准赛道完成 3 场有效提交，单场不低于 420 分，才能在次日进入进阶赛道。规则页第 4 条写明，练习赛道的试跑不计入这 3 场。</div>
+      </details>
+      <details class="faq">
+        <summary>同一选手能同时报多个赛道吗？</summary>
+        <div class="ans">可以同时报 2 个赛道，但积分只计入主赛道，副赛道成绩单独展示。11 月 3 日版本说明补充：主赛道在当期开赛后不可更改。</div>
+      </details>
+      <details class="faq">
+        <summary>赛季积分与每日积分有什么区别？</summary>
+        <div class="ans">每日积分当日结算，赛季积分按 30 天滚动累加，取每名选手前 21 个比赛日的成绩，缺席日不补分。11 月 1 日到 11 月 7 日缺赛 3 天的选手，排名平均下滑约 55 位。</div>
+      </details>
+      <details class="faq">
+        <summary>缓存复用加分需要提前申请吗？</summary>
+        <div class="ans">不需要申请，系统按提交方案里是否复用同组缓存结果自动判定。11 月 8 日 0 点起生效，单项加分 3—60 分。跨期复用是否计入，目前讨论区反馈为“待确认”，以官方后续条文为准。</div>
+      </details>
+      <details class="faq">
+        <summary>团队接力赛道的分数算到个人吗？</summary>
+        <div class="ans">10 月 30 日公告称计入成员个人积分，11 月 2 日榜单页把团队分单列在副栏，当前以页面展示为准，公告尚未更新。</div>
+      </details>
+    </section>
+
+    <section class="panel" id="reviews" aria-labelledby="h-reviews">
+      <div class="sec-head">
+        <h2 id="h-reviews">参赛者评论</h2>
+        <span class="hint">来自提交页讨论区与复盘页留言</span>
+      </div>
+      <div class="quotes">
+        <div class="quote">
+          <p>11 月 6 日那份 93% 完成度的方案我照着改过一遍，卡在缓存字段上，静态检查报第 17 行，改完确实过了。</p>
+          <div class="who"><span>Kirsan_07 · 进阶赛道</span><span class="stars">★★★★★</span></div>
+        </div>
+        <div class="quote">
+          <p>超时扣分改成每分钟 40 分后，我 19:50 提交和 18:30 提交的分数差不多，早交没什么意义了。</p>
+          <div class="who"><span>调度小赵 · 标准赛道</span><span class="stars">★★★★</span></div>
+        </div>
+        <div class="quote">
+          <p>极限赛道资源上限从 3 800 降到 3 500 那天，我连续退了 3 份提交，规则页改了但下载的任务包还是旧上限。</p>
+          <div class="who"><span>Northwind · 极限资源</span><span class="stars">★★</span></div>
+        </div>
+        <div class="quote">
+          <p>榜单分段排挺实用，我完成度排第 80，资源排 900 多，一看就明白问题在资源控制上。</p>
+          <div class="who"><span>阿澜 · 标准赛道</span><span class="stars">★★★★</span></div>
+        </div>
+        <div class="quote">
+          <p>团队赛道那个积分归属说法前后不一致，10-30 公告和 11-02 榜单页对不上，客服也没给准话。</p>
+          <div class="who"><span>接力七号 · 团队赛道</span><span class="stars">★★★</span></div>
+        </div>
+        <div class="quote">
+          <p>练习赛道回放保留 14 天以后，新人问问题会先去看回放，讨论区重复提问明显少了。</p>
+          <div class="who"><span>Lena_Q · 练习赛道</span><span class="stars">★★★★</span></div>
+        </div>
+        <div class="quote">
+          <p>赛季积分取前 21 个比赛日，我缺了 3 天就从 41 名掉到 96 名，日均分 748 也没什么用。</p>
+          <div class="who"><span>东南风 · 进阶赛道</span><span class="stars">★★★</span></div>
+        </div>
+        <div class="quote">
+          <p>缓存复用那条附录只写了半句，跨期能不能用没讲，建议补一条示例。整体流程倒是比以前顺。</p>
+          <div class="who"><span>算法老周 · 多目标任务</span><span class="stars">★★★</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="news" aria-labelledby="h-news">
+      <div class="sec-head">
+        <h2 id="h-news">相关资讯</h2>
+        <span class="hint">赛制与生态动态</span>
+      </div>
+      <ul class="list-compact">
+        <li><time datetime="2026-11-07">11-07</time><span><b>附录 B 上线后首日</b>：缓存复用加分在练习赛道试跑 600 次，命中加分的方案占 38%，平均加 27 分。</span></li>
+        <li><time datetime="2026-11-06">11-06</time><span><b>极限赛道资源下调首日</b>：96 人参赛，11 份提交因超限被退回，最高分从 812 降到 771。</span></li>
+        <li><time datetime="2026-11-05">11-05</time><span><b>时序规则改写后 24 小时</b>：标准赛道晚段提交占比从 31% 升到 47%，均分上升 42 分。</span></li>
+        <li><time datetime="2026-11-03">11-03</time><span><b>主赛道锁定机制上线</b>：当期开赛后不可改主赛道，当天有 7 名选手提交更改请求被退回。</span></li>
+        <li><time datetime="2026-11-01">11-01</time><span><b>练习回放保留期延长</b>：由当天清空改为 14 天，首周回放观看次数 12 400 次。</span></li>
+      </ul>
+    </section>
+
+    <section class="panel" id="related" aria-labelledby="h-related">
+      <div class="sec-head">
+        <h2 id="h-related">相关推荐</h2>
+        <span class="hint">按近期阅读与提交记录匹配</span>
+      </div>
+      <div class="chips">
+        <a href="/#deep">俄罗斯引擎评分权重表</a>
+        <a href="/#latest">超时扣分规则修订记录</a>
+        <a href="/#guide">标准赛道三段提交策略</a>
+        <a href="/#deep">极限资源赛道资源上限变化</a>
+        <a href="/#faq">缓存复用加分问答</a>
+        <a href="/#reviews">进阶赛道选手复盘留言</a>
+        <a href="/#overview">团队接力赛道开赛日历</a>
+        <a href="/#deep">赛季积分前 21 日计分说明</a>
+      </div>
+    </section>
+
+    <section class="panel" id="board" aria-labelledby="h-board">
+      <div class="sec-head">
+        <h2 id="h-board">可信度分层：消息该怎么读</h2>
+        <span class="hint">对同一事件的不同来源分级</span>
+      </div>
+      <table class="compare">
+        <thead>
+          <tr><th>分层</th><th>内容</th><th>来源与时间</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>事实</td><td>超时改为每分钟扣 40 分，最低保留 200 分</td><td>规则页第 5 条，11-05 20:10 发布</td></tr>
+          <tr><td>事实</td><td>极限赛道资源上限 3 500 单位</td><td>任务包字段 max_resource，11-06 09:00</td></tr>
+          <tr><td>回应</td><td>校验失败不计入超时扣分</td><td>讨论区客服回复，11-06 21:47</td></tr>
+          <tr><td>转述</td><td>缓存可跨期复用</td><td>讨论区帖文 4 条，1 条被标“待确认”</td></tr>
+          <tr><td>推测</td><td>资源项权重下一步可能再拆</td><td>无官方来源，仅为选手讨论区推测</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <aside class="side-col">
+    <div class="side-card">
+      <h3>栏目导航</h3>
+      <ul class="side-nav" id="sideNav">
+        <li><a href="/#overview">赛事概览</a></li>
+        <li><a href="/#featured">精选对局</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">赛道入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">参赛指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#reviews">参赛者评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#related">相关推荐</a></li>
+        <li><a href="/#board">可信度分层</a></li>
+      </ul>
+    </div>
+    <div class="side-card">
+      <h3>今日截止</h3>
+      <div class="countdown" id="countdown">第 312 期 · 20:00 截止</div>
+      <p class="meta" style="margin-top:10px">11-08 期 · 当前 1 601 份有效提交</p>
+    </div>
+    <div class="side-card">
+      <h3>标准赛道今日前列</h3>
+      <ol class="rank">
+        <li><span>Kirsan_07</span><span class="v">884</span></li>
+        <li><span>调度小赵</span><span class="v">861</span></li>
+        <li><span>阿澜</span><span class="v">853</span></li>
+        <li><span>Northwind</span><span class="v">840</span></li>
+        <li><span>东南风</span><span class="v">826</span></li>
+        <li><span>算法老周</span><span class="v">812</span></li>
+      </ol>
+      <p class="meta" style="margin-top:8px">截至 11-08 19:30，未结算</p>
+    </div>
+    <div class="side-card">
+      <h3>近期赛程</h3>
+      <ul class="list-compact">
+        <li><time>11-08</time><span>第 312 期 · 标准/进阶/极限</span></li>
+        <li><time>11-09</time><span>第 313 期 · 含缓存复用赛道</span></li>
+        <li><time>11-10</time><span>第 314 期 · 团队接力开赛</span></li>
+        <li><time>11-11</time><span>第 315 期 · 多目标任务专场</span></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="foot-brand">
+          <svg width="24" height="24" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#e8b64c"/>
+            <path d="M14 44 26 18l8 14 6-10 10 22z" fill="#1b2a4a"/>
+            <circle cx="46" cy="20" r="5" fill="#1b2a4a"/>
+          </svg>
+          每日大赛俄罗斯引擎
+        </div>
+        <p style="margin:0 0 10px;color:#b8c5da">每天 20:00 截单的算法调度竞技场，积分、赛季、资源约束在同一套规则里滚动结算。</p>
+        <p class="meta" style="color:#8b9ab3">页面更新时间 11-08 19:30，对应正文第 312 期提交数、榜单前列与最终更新清单。</p>
+      </div>
+      <div>
+        <h2>赛事</h2>
+        <ul>
+          <li><a href="/#overview">赛事概览</a></li>
+          <li><a href="/#channels">赛道入口</a></li>
+          <li><a href="/#featured">精选对局</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>规则</h2>
+        <ul>
+          <li><a href="/#deep">评分口径解析</a></li>
+          <li><a href="/#latest">更新与公告</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#board">可信度分层</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>参与</h2>
+        <ul>
+          <li><a href="/#guide">参赛指南</a></li>
+          <li><a href="/#reviews">参赛者评论</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+          <li><a href="/#top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">页面中的选手昵称、赛道人数、得分与日期均为示例数据，用于说明赛事结构与评分方式；具体规则以提交页当期条文为准。不提供报名、充值或第三方代跑服务。</p>
+    <div class="foot-bottom">
+      <span>© 2026 每日大赛俄罗斯引擎 · 内容示例，非官方站点</span>
+      <span>第 312 期 · 规则版本 v4.6.2</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var navMain = document.getElementById('navMain');
+
+  menuBtn.addEventListener('click', function(){
+    var open = navMain.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.textContent = open ? '收起菜单' : '导航菜单';
+  });
+
+  document.querySelectorAll('.nav-main a').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(navMain.classList.contains('open')){
+        navMain.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.textContent = '导航菜单';
+      }
+    });
+  });
+
+  // 滚动高亮
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  function highlight(){
+    var pos = window.scrollY + 140;
+    var current = sections[0];
+    sections.forEach(function(s){
+      if(s.offsetTop <= pos) current = s;
+    });
+    sideLinks.forEach(function(a){
+      var id = a.getAttribute('href').split('#')[1];
+      a.classList.toggle('active', id === current.id);
+    });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  highlight();
+
+  // 回到顶部
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 700) toTop.classList.add('show');
+    else toTop.classList.remove('show');
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // 本地搜索
+  var input = document.getElementById('searchInput');
+  var btn = document.getElementById('searchBtn');
+  var noResult = document.getElementById('noResult');
+  var searchables = Array.prototype.slice.call(document.querySelectorAll('#updateList li, #featured .card, #related .chips a, .list-compact li'));
+
+  function clearMarks(){
+    document.querySelectorAll('mark').forEach(function(m){
+      var parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+  }
+
+  function doSearch(){
+    clearMarks();
+    var q = input.value.trim();
+    if(!q){
+      noResult.style.display = 'none';
+      searchables.forEach(function(el){ el.style.display = ''; });
+      return;
+    }
+    var hit = 0;
+    searchables.forEach(function(el){
+      if(el.textContent.indexOf(q) !== -1){
+        el.style.display = '';
+        hit++;
+      } else {
+        el.style.display = 'none';
+      }
+    });
+    noResult.style.display = hit ? 'none' : 'block';
+  }
+
+  btn.addEventListener('click', doSearch);
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+  input.addEventListener('input', function(){
+    if(input.value.trim() === ''){ doSearch(); }
+  });
+
+  document.querySelectorAll('a[href^="/#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href').slice(2);
+      var target = document.getElementById(id);
+      if(!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.scrollY - 116;
+      window.scrollTo({top: top, behavior:'smooth'});
+      history.replaceState(null, '', '/' + '#' + id);
+    });
+  });
+})();
+</script>
+
+</body>
+  </html>
