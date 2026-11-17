@@ -1,0 +1,1318 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蒂娜muchitina-手作黏土与微缩场景</title>
+<meta name="description" content="蒂娜muchitina专注手作黏土与微缩场景创作，记录从取土配方到烧制温度的全过程。整理2026年秋季黏土工具选购、配色方案与干燥开裂修复经验，附社区作品点评与常见问题解答。">
+<meta name="keywords" content="蒂娜muchitina">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b4553c'/%3E%3Cpath d='M16 44c2-14 8-22 16-22s14 8 16 22' fill='none' stroke='%23f6e7d8' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='20' r='5' fill='%23f6e7d8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --clay:#b4553c;
+  --clay-dark:#8a3d2a;
+  --clay-soft:#f3e3d8;
+  --ink:#2c2420;
+  --ink-2:#574b44;
+  --ink-3:#86766d;
+  --paper:#fbf7f2;
+  --card:#ffffff;
+  --line:#e6d9cd;
+  --accent:#3f6b5e;
+  --accent-soft:#e3ede8;
+  --gold:#c08a2e;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(44,36,32,.05),0 6px 18px rgba(44,36,32,.06);
+  --shadow-hover:0 3px 6px rgba(44,36,32,.07),0 12px 26px rgba(44,36,32,.10);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --announce-h:44px;
+  --header-h:64px;
+  --maxw:1180px;
+  --gap:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--clay-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+img{display:block;max-width:100%}
+h1,h2,h3,h4{margin:0 0 .5em;line-height:1.35;font-weight:700}
+p{margin:0 0 .9em}
+ul,ol{margin:0 0 1em;padding-left:1.3em}
+li{margin-bottom:.35em}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+::selection{background:var(--clay-soft);color:var(--clay-dark)}
+
+[id]{scroll-margin-top:calc(var(--announce-h) + var(--header-h) + 14px)}
+
+/* ---------- 吸顶区 ---------- */
+.sticky-wrap{position:sticky;top:0;z-index:60}
+.announce{
+  background:var(--clay-dark);
+  color:#fdf3ea;
+  font-size:13.5px;
+  height:var(--announce-h);
+  display:flex;align-items:center;
+  overflow:hidden;
+}
+.announce .inner{
+  max-width:var(--maxw);margin:0 auto;width:100%;padding:0 20px;
+  display:flex;align-items:center;gap:10px;white-space:nowrap;
+}
+.announce .tag{
+  background:var(--gold);color:#2c2420;font-weight:700;
+  padding:1px 8px;border-radius:20px;font-size:12px;letter-spacing:.02em;flex:none;
+}
+.announce .txt{overflow:hidden;text-overflow:ellipsis;flex:1}
+.announce .txt strong{color:#fff;font-weight:600}
+.announce a{color:#ffe6b8;font-size:12.5px;flex:none}
+.announce a:hover{text-decoration:underline}
+
+.site-header{
+  background:rgba(251,247,242,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  height:var(--header-h);
+}
+.header-inner{
+  max-width:var(--maxw);margin:0 auto;height:100%;padding:0 20px;
+  display:flex;align-items:center;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-logo{width:36px;height:36px;flex:none}
+.brand-name{font-size:18px;font-weight:800;letter-spacing:.01em;color:var(--clay-dark)}
+.main-nav{display:flex;gap:2px;flex:1;flex-wrap:wrap}
+.main-nav a{
+  font-size:14px;color:var(--ink-2);padding:6px 10px;border-radius:var(--radius-sm);
+  font-weight:500;
+}
+.main-nav a:hover{background:var(--clay-soft);color:var(--clay-dark);text-decoration:none}
+.header-tools{display:flex;align-items:center;gap:8px;flex:none}
+.search-box{position:relative}
+.search-box input{
+  font-family:inherit;font-size:13.5px;padding:7px 12px 7px 32px;
+  width:158px;border:1px solid var(--line);border-radius:20px;
+  background:#fff;color:var(--ink);
+}
+.search-box input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.search-box svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:var(--ink-3);fill:none;stroke-width:2}
+.search-result{
+  position:absolute;top:calc(100% + 6px);right:0;width:290px;max-height:300px;overflow:auto;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);
+  box-shadow:var(--shadow-hover);font-size:13px;display:none;
+}
+.search-result.open{display:block}
+.search-result a{display:block;padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ink-2)}
+.search-result a:last-child{border-bottom:none}
+.search-result a:hover{background:var(--clay-soft);text-decoration:none}
+.search-result .empty{padding:12px;color:var(--ink-3)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  font-family:inherit;font-size:14px;font-weight:600;
+  padding:9px 18px;border-radius:22px;border:1px solid transparent;
+  cursor:pointer;transition:transform .15s, box-shadow .15s, background .15s;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--clay);color:#fff}
+.btn-primary:hover{background:var(--clay-dark);box-shadow:var(--shadow)}
+.btn-ghost{background:transparent;color:var(--clay-dark);border-color:var(--clay)}
+.btn-ghost:hover{background:var(--clay-soft)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:7px;cursor:pointer;color:var(--ink-2)}
+.menu-toggle svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;display:block}
+
+/* ---------- 布局 ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.section{padding:46px 0}
+.section + .section{border-top:1px solid var(--line)}
+.section-head{max-width:760px;margin-bottom:26px}
+.section-head h2{font-size:26px;letter-spacing:-.01em}
+.section-head .sub{color:var(--ink-3);font-size:14.5px;margin:0}
+.eyebrow{
+  display:inline-block;font-size:12px;font-weight:700;letter-spacing:.09em;
+  color:var(--clay-dark);background:var(--clay-soft);
+  padding:3px 10px;border-radius:20px;margin-bottom:10px;text-transform:uppercase;
+}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1100px 380px at 88% -60px, rgba(180,85,60,.16), transparent 60%),
+    radial-gradient(700px 320px at -5% 110%, rgba(63,107,94,.12), transparent 60%),
+    var(--paper);
+  padding:52px 0 58px;
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
+.hero h1{
+  font-size:clamp(34px,4.4vw,52px);
+  letter-spacing:-.02em;line-height:1.14;margin-bottom:14px;
+}
+.hero h1 .dot{color:var(--clay)}
+.hero .lede{font-size:17.5px;color:var(--ink-2);max-width:34em;margin-bottom:24px}
+.hero .lede strong{color:var(--ink);font-weight:600}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+.stat b{display:block;font-size:22px;color:var(--clay-dark);line-height:1.2}
+.stat span{font-size:12.5px;color:var(--ink-3)}
+.hero-art{position:relative;aspect-ratio:1/1;max-width:430px;justify-self:end;width:100%}
+.hero-art svg{width:100%;height:100%;display:block}
+
+/* ---------- 三栏门户 ---------- */
+.portal-grid{display:grid;grid-template-columns:1fr 1fr 300px;gap:var(--gap);align-items:start}
+.col-stack{display:flex;flex-direction:column;gap:var(--gap)}
+
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:20px;
+  transition:transform .18s, box-shadow .18s, border-color .18s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:#dbcabd}
+.card h3{font-size:17px}
+.card h3 a{color:var(--ink)}
+.card h3 a:hover{color:var(--clay-dark);text-decoration:none}
+.card .meta{font-size:12.5px;color:var(--ink-3);display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.card p{font-size:14.5px;color:var(--ink-2);margin-bottom:8px}
+.card p:last-child{margin-bottom:0}
+.pill{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:12px;background:var(--accent-soft);color:var(--accent)}
+.pill.clay{background:var(--clay-soft);color:var(--clay-dark)}
+.pill.gold{background:#f7edd6;color:#8a6114}
+
+/* 精选推荐 大卡 */
+.spotlight{
+  display:grid;grid-template-columns:1fr;gap:0;overflow:hidden;padding:0;
+}
+.spotlight img{width:100%;height:210px;object-fit:cover}
+.spotlight .body{padding:20px}
+.spotlight h3{font-size:20px}
+
+/* 紧凑列表 */
+.list-card ul{list-style:none;padding:0;margin:0}
+.list-card li{border-bottom:1px dashed var(--line);padding:11px 0;margin:0}
+.list-card li:last-child{border-bottom:none;padding-bottom:0}
+.list-card li:first-child{padding-top:0}
+.list-card .li-title{font-size:14.5px;font-weight:600;color:var(--ink);display:block}
+.list-card .li-title:hover{color:var(--clay-dark)}
+.list-card .li-meta{font-size:12px;color:var(--ink-3)}
+
+/* 侧栏 */
+.sidebar .card + .card{margin-top:var(--gap)}
+.side-nav{list-style:none;padding:0;margin:0}
+.side-nav a{
+  display:block;font-size:14px;padding:7px 12px;border-radius:var(--radius-sm);
+  color:var(--ink-2);border-left:3px solid transparent;
+}
+.side-nav a:hover{background:var(--clay-soft);text-decoration:none}
+.side-nav a.active{background:var(--clay-soft);border-left-color:var(--clay);color:var(--clay-dark);font-weight:600}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tag-cloud a{
+  font-size:12.5px;padding:4px 11px;border-radius:16px;
+  background:#f3ece4;color:var(--ink-2);border:1px solid var(--line);
+}
+.tag-cloud a:hover{background:var(--clay-soft);color:var(--clay-dark);border-color:#e0c3b2;text-decoration:none}
+
+/* 创作者证言 / 引语卡 */
+.quote-card{
+  background:linear-gradient(135deg,#fff8f2,#f6ece2);
+  border:1px solid #ecd9ca;border-left:5px solid var(--clay);
+  border-radius:var(--radius);padding:22px 24px;position:relative;
+}
+.quote-card::before{
+  content:"“";position:absolute;left:14px;top:0;font-size:56px;color:#dbb9a5;line-height:1;font-family:Georgia,serif;
+}
+.quote-card blockquote{margin:0 0 12px;padding-left:26px;font-size:15.5px;color:var(--ink-2);line-height:1.8}
+.quote-card .who{display:flex;align-items:center;gap:10px;padding-left:26px}
+.quote-card .who .avatar{width:34px;height:34px;border-radius:50%;background:var(--clay);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:none}
+.quote-card .who b{font-size:14px;display:block;line-height:1.3}
+.quote-card .who span{font-size:12px;color:var(--ink-3)}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding-left:28px;margin-bottom:18px}
+.timeline li:last-child{margin-bottom:0}
+.timeline li::before{
+  content:"";position:absolute;left:1px;top:7px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:3px solid var(--clay);
+}
+.timeline time{font-size:12px;color:var(--clay-dark);font-weight:700;letter-spacing:.02em}
+.timeline p{font-size:14px;color:var(--ink-2);margin:3px 0 0}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+.compare .col{padding:20px}
+.compare .col:first-child{border-right:1px solid var(--line);background:#fcf9f5}
+.compare h3{font-size:16px;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.compare .dot-a,.compare .dot-b{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+.dot-a{background:var(--clay)}
+.dot-b{background:var(--accent)}
+.compare ul{padding-left:1.1em;margin:0;font-size:14px;color:var(--ink-2)}
+.compare li{margin-bottom:.45em}
+
+/* 编号步骤 */
+.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:14px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:38px 1fr;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px}
+.steps li::before{
+  content:counter(s);width:34px;height:34px;border-radius:50%;
+  background:var(--clay);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;
+  font-size:15px;
+}
+.steps b{display:block;font-size:15px;margin-bottom:2px}
+.steps p{font-size:14px;color:var(--ink-2);margin:0}
+
+/* 标签索引 */
+.channel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.channel-grid a{
+  display:flex;flex-direction:column;gap:2px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:13px 15px;color:var(--ink);transition:border-color .15s,transform .15s;
+}
+.channel-grid a:hover{border-color:var(--clay);transform:translateY(-2px);text-decoration:none}
+.channel-grid b{font-size:14.5px}
+.channel-grid span{font-size:12px;color:var(--ink-3)}
+
+/* 深度解析 */
+.deep{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:36px clamp(20px,4vw,48px);
+}
+.deep .kicker{font-size:12.5px;font-weight:700;color:var(--clay-dark);letter-spacing:.08em;margin-bottom:8px}
+.deep h2{font-size:29px;letter-spacing:-.015em;max-width:22em}
+.deep .byline{font-size:13px;color:var(--ink-3);margin-bottom:22px;border-bottom:1px solid var(--line);padding-bottom:16px}
+.deep h3{font-size:19.5px;margin-top:32px;padding-top:4px}
+.deep p{color:var(--ink-2);font-size:15.5px;max-width:70ch}
+.deep strong{color:var(--ink)}
+.pull{
+  border-left:4px solid var(--accent);background:var(--accent-soft);
+  border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:14px 20px;margin:18px 0;
+  font-size:15px;color:#2f5248;
+}
+.verdict{
+  background:#fdf6ea;border:1px dashed #d8b46a;border-radius:var(--radius-sm);
+  padding:16px 20px;margin:20px 0;
+}
+.verdict b{color:#7a5410}
+table.data{width:100%;border-collapse:collapse;font-size:14px;margin:14px 0 20px;background:#fff}
+table.data th,table.data td{border:1px solid var(--line);padding:9px 12px;text-align:left}
+table.data th{background:#f7f0e8;font-weight:600;color:var(--ink);font-size:13px}
+table.data td{color:var(--ink-2)}
+table.data tr:nth-child(even) td{background:#fcfaf7}
+
+/* FAQ */
+.faq details{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);
+  margin-bottom:10px;padding:0;overflow:hidden;
+}
+.faq details[open]{border-color:#dcc7b6;box-shadow:var(--shadow)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:15px 46px 15px 18px;font-weight:600;font-size:15px;
+  position:relative;color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  font-size:20px;color:var(--clay);font-weight:400;transition:transform .18s;
+}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq .ans{padding:0 18px 16px;font-size:14.5px;color:var(--ink-2)}
+.faq .ans p{margin-bottom:.6em}
+.faq .ans p:last-child{margin-bottom:0}
+
+/* 评论 */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:17px 18px;display:flex;flex-direction:column}
+.review header{display:flex;align-items:center;gap:9px;margin-bottom:9px}
+.review .av{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px;flex:none}
+.review .who b{font-size:13.5px;display:block;line-height:1.2}
+.review .who span{font-size:11.5px;color:var(--ink-3)}
+.review p{font-size:14px;color:var(--ink-2);margin:0;flex:1}
+.review .stars{color:var(--gold);font-size:12.5px;letter-spacing:1px;margin-top:9px}
+
+/* 榜单 */
+.rank{list-style:none;padding:0;margin:0;counter-reset:r}
+.rank li{
+  counter-increment:r;display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;
+  padding:12px 4px;border-bottom:1px solid var(--line);font-size:14.5px;
+}
+.rank li:last-child{border-bottom:none}
+.rank li::before{
+  content:counter(r);width:26px;height:26px;border-radius:50%;background:#f2e6db;color:var(--clay-dark);
+  font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;
+}
+.rank li:nth-child(1)::before{background:var(--gold);color:#fff}
+.rank li:nth-child(2)::before{background:#b8b0a6;color:#fff}
+.rank li:nth-child(3)::before{background:#c99e78;color:#fff}
+.rank .score{font-weight:700;color:var(--clay-dark);font-size:13.5px;font-variant-numeric:tabular-nums}
+
+/* 资讯列表 */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.news-item{
+  display:flex;gap:12px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:14px;align-items:flex-start;
+}
+.news-item .date{flex:none;text-align:center;background:var(--clay-soft);border-radius:var(--radius-sm);padding:6px 9px;color:var(--clay-dark);line-height:1.15}
+.news-item .date b{display:block;font-size:16px}
+.news-item .date span{font-size:10.5px}
+.news-item h4{font-size:14px;margin:0 0 3px;font-weight:600}
+.news-item p{font-size:12.5px;color:var(--ink-3);margin:0}
+
+/* 推荐标签区 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:10px}
+.rec-tags a{
+  font-size:13.5px;padding:7px 15px;border-radius:20px;border:1px solid var(--line);
+  background:#fff;color:var(--ink-2);font-weight:500;
+}
+.rec-tags a:hover{border-color:var(--clay);color:var(--clay-dark);background:var(--clay-soft);text-decoration:none}
+
+/* 页尾 */
+.site-footer{
+  background:#2c2420;color:#cfc3ba;margin-top:0;padding:44px 0 0;font-size:14px;
+}
+.site-footer a{color:#e8ddd4}
+.site-footer a:hover{color:#fff}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;padding-bottom:34px}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-brand .name{color:#fff;font-weight:800;font-size:17px}
+.site-footer .position{color:#a89a90;font-size:13.5px;max-width:26em;margin-bottom:10px}
+.site-footer h4{color:#f0e6de;font-size:13.5px;letter-spacing:.05em;margin-bottom:12px}
+.footer-links{list-style:none;padding:0;margin:0}
+.footer-links li{margin-bottom:6px;font-size:13.5px}
+.footer-bottom{border-top:1px solid #463a33;padding:16px 0 22px;font-size:12.5px;color:#9c8e84;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:20px;z-index:70;width:44px;height:44px;border-radius:50%;
+  background:var(--clay);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-hover);opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .2s,transform .2s,visibility .2s;
+}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2.2}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .card:hover,.channel-grid a:hover,.btn:hover{transform:none}
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1024px){
+  .portal-grid{grid-template-columns:1fr 1fr}
+  .portal-grid .sidebar{grid-column:1 / -1}
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero-art{justify-self:start;max-width:340px}
+  .channel-grid{grid-template-columns:repeat(3,1fr)}
+  .reviews{grid-template-columns:1fr 1fr}
+  .news-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  :root{--gap:16px;--header-h:58px}
+  .menu-toggle{display:block}
+  .header-inner{gap:10px}
+  .main-nav{
+    display:none;position:absolute;left:0;right:0;top:calc(var(--announce-h) + var(--header-h));
+    background:var(--paper);border-bottom:1px solid var(--line);
+    padding:10px 16px 16px;flex-direction:column;gap:2px;
+    box-shadow:var(--shadow-hover);
+  }
+  .main-nav.open{display:flex}
+  .main-nav a{padding:10px 12px;font-size:15px}
+  .site-header{position:relative}
+  .sticky-wrap{position:sticky}
+  .search-box input{width:110px}
+  .search-box input:focus{width:150px}
+  .header-tools .btn-primary{display:none}
+  .portal-grid{grid-template-columns:1fr}
+  .portal-grid .sidebar{grid-column:auto}
+  .hero{padding:36px 0 42px}
+  .hero h1{font-size:32px}
+  .hero .lede{font-size:16px}
+  .section{padding:34px 0}
+  .section-head h2{font-size:22px}
+  .channel-grid{grid-template-columns:1fr 1fr}
+  .reviews{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .compare .col:first-child{border-right:none;border-bottom:1px solid var(--line)}
+  .deep{padding:24px 18px}
+  .deep h2{font-size:23px}
+  .footer-grid{grid-template-columns:1fr;gap:24px}
+  .hero-stats{gap:20px}
+  .to-top{right:12px;bottom:14px;width:40px;height:40px}
+}
+@media (max-width:400px){
+  .search-box{display:none}
+  .hero h1{font-size:29px}
+  .channel-grid{grid-template-columns:1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="announce" role="region" aria-label="站点公告">
+    <div class="inner">
+      <span class="tag">更新</span>
+      <span class="txt"><strong>11月6日</strong> 新增「低温软陶开裂修复：三次回炉温度记录」与 12 张过程图；本周工具团购改期至 <strong>11月14日</strong>。</span>
+      <a href="/#faq">看常见问题 →</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="返回顶部">
+        <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#b4553c"/>
+          <path d="M15 45c2.5-15 8.5-23 17-23s14.5 8 17 23" fill="none" stroke="#f6e7d8" stroke-width="4.6" stroke-linecap="round"/>
+          <circle cx="32" cy="19" r="5.2" fill="#f6e7d8"/>
+          <path d="M23 45h18" stroke="#f6e7d8" stroke-width="3.4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">蒂娜muchitina</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#news">相关资讯</a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="search" id="siteSearch" placeholder="搜工具、配方…" aria-label="站内搜索" autocomplete="off">
+          <div class="search-result" id="searchResult" role="listbox" aria-label="搜索结果"></div>
+        </div>
+        <a class="btn btn-primary" href="/#guide">入门路线</a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="展开导航菜单">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">手作黏土 · 微缩场景</span>
+        <h1 id="heroTitle">蒂娜muchitina<span class="dot">.</span></h1>
+        <p class="lede">把一块 500 克软陶烤成 1:24 的旧书店窗台。这里记录取土配方、<strong>130℃ 三段烘烤</strong>曲线、丙烯罩染次序，以及做完后才知道的返工成本。工作室在杭州拱墅，工具柜里常年备着 6 种硬度的刮片。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#deep">读烘烤温度实测</a>
+          <a class="btn btn-ghost" href="/#channels">按成品类型找教程</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>312</b><span>篇过程记录</span></div>
+          <div class="stat"><b>47</b><span>个微缩场景</span></div>
+          <div class="stat"><b>9</b><span>种软陶品牌实测</span></div>
+          <div class="stat"><b>2026</b><span>秋季配方库版本</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 420" role="img" aria-label="微缩黏土工作台示意图">
+          <defs>
+            <radialGradient id="g1" cx="35%" cy="28%" r="80%">
+              <stop offset="0%" stop-color="#f8e4d3"/>
+              <stop offset="100%" stop-color="#e9cdb7"/>
+            </radialGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#b4553c"/>
+              <stop offset="100%" stop-color="#8a3d2a"/>
+            </linearGradient>
+            <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#4f7c6e"/>
+              <stop offset="100%" stop-color="#31564b"/>
+            </linearGradient>
+          </defs>
+          <circle cx="210" cy="210" r="186" fill="url(#g1)"/>
+          <circle cx="210" cy="210" r="186" fill="none" stroke="#dcc0aa" stroke-width="1.5" stroke-dasharray="3 7"/>
+          <!-- 工作台 -->
+          <rect x="74" y="238" width="272" height="96" rx="12" fill="#c98b62"/>
+          <rect x="74" y="238" width="272" height="14" rx="7" fill="#dba079"/>
+          <rect x="96" y="334" width="16" height="34" rx="4" fill="#a8704c"/>
+          <rect x="308" y="334" width="16" height="34" rx="4" fill="#a8704c"/>
+          <!-- 黏土球 -->
+          <circle cx="146" cy="216" r="34" fill="url(#g2)"/>
+          <ellipse cx="136" cy="205" rx="11" ry="8" fill="#d8795d" opacity=".85"/>
+          <circle cx="212" cy="224" r="26" fill="url(#g3)"/>
+          <ellipse cx="205" cy="215" rx="8" ry="6" fill="#6c9b8b" opacity=".9"/>
+          <circle cx="266" cy="213" r="30" fill="#e8b04b"/>
+          <ellipse cx="258" cy="203" rx="9" ry="7" fill="#f3c977"/>
+          <!-- 刮片工具 -->
+          <g transform="rotate(-18 320 210)">
+            <rect x="298" y="150" width="11" height="78" rx="5" fill="#6b5b52"/>
+            <rect x="292" y="222" width="23" height="26" rx="4" fill="#cfc7bf"/>
+          </g>
+          <!-- 微缩书架 -->
+          <rect x="252" y="286" width="66" height="10" rx="3" fill="#8a3d2a"/>
+          <rect x="258" y="258" width="8" height="28" rx="2" fill="#4f7c6e"/>
+          <rect x="269" y="264" width="8" height="22" rx="2" fill="#c08a2e"/>
+          <rect x="280" y="256" width="8" height="30" rx="2" fill="#b4553c"/>
+          <rect x="291" y="266" width="8" height="20" rx="2" fill="#6b5b52"/>
+          <!-- 小窗 -->
+          <rect x="106" y="120" width="86" height="70" rx="6" fill="#fdf7f0" stroke="#c9a288" stroke-width="3"/>
+          <path d="M149 120v70M106 155h86" stroke="#c9a288" stroke-width="3"/>
+          <circle cx="132" cy="140" r="9" fill="#e8b04b"/>
+          <!-- 温度计 -->
+          <rect x="316" y="128" width="16" height="62" rx="8" fill="#fdf7f0" stroke="#b4553c" stroke-width="3"/>
+          <rect x="320" y="152" width="8" height="32" rx="4" fill="#b4553c"/>
+          <text x="324" y="118" font-size="13" font-family="monospace" fill="#57574f" text-anchor="middle">130</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 领域概览 + 精选 + 最新 -->
+  <section class="section" id="overview" aria-labelledby="ovTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">领域概览</span>
+        <h2 id="ovTitle">软陶、树脂黏土、纸黏土怎么分</h2>
+        <p class="sub">三类材料在固化方式、收缩率、上手门槛上差别很大，选错材料重做一整件是常事。</p>
+      </div>
+
+      <div class="portal-grid">
+        <div class="col-stack">
+          <article class="card" id="spotlight">
+            <div class="meta"><span class="pill clay">精选</span><span>11月5日</span><span>阅读 4 分钟</span></div>
+            <h3><a href="/#deep">软陶 130℃ 三段烘烤与 150℃ 一次烤完，成品差别在哪</a></h3>
+            <p>用同批次 4 块 Fimo Soft 对比：分段烤的弯曲强度高 18%，但表面光泽弱一档；一次烤完的边缘塌陷概率是前者的 2.4 倍。附 12 张断面图。</p>
+          </article>
+
+          <div class="compare" aria-label="三类黏土材料对照">
+            <div class="col">
+              <h3><span class="dot-a"></span>软陶（聚合物黏土）</h3>
+              <ul>
+                <li>烤箱 110–130℃ 固化，不风干</li>
+                <li>收缩率约 1–2%，尺寸稳定</li>
+                <li>可反复修改，适合微缩建筑</li>
+                <li>烤过头会发脆、发黄</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3><span class="dot-b"></span>树脂黏土</h3>
+              <ul>
+                <li>常温风干 24–48 小时</li>
+                <li>半透明，适合花瓣、叶片</li>
+                <li>收缩率 8–12%，需预留尺寸</li>
+                <li>干后难二次塑形</li>
+              </ul>
+            </div>
+          </div>
+
+          <article class="card list-card">
+            <h3>最新更新 <span class="pill gold">本周</span></h3>
+            <ul>
+              <li><a class="li-title" href="/#deep">低温软陶开裂修复：三次回炉温度记录</a><span class="li-meta">11月6日 · 过程记录</span></li>
+              <li><a class="li-title" href="/#guide">1:24 瓦楞纸底板防翘的四步压平法</a><span class="li-meta">11月5日 · 体验指南</span></li>
+              <li><a class="li-title" href="/#channels">丙烯罩染不堵笔：稀释比例 1:3 实测</a><span class="li-meta">11月4日 · 上色</span></li>
+              <li><a class="li-title" href="/#news">杭州拱墅区手作市集 11月15日 报名开启</a><span class="li-meta">11月3日 · 活动</span></li>
+              <li><a class="li-title" href="/#guide">6 种硬度刮片的实际用刀位置</a><span class="li-meta">11月2日 · 工具</span></li>
+            </ul>
+          </article>
+
+          <div class="quote-card">
+            <blockquote>第一次做微缩面包柜，烤完发现层板歪了 3 毫米，整柜拆了重做。后来把底板在 80℃ 预热 3 分钟再贴，就再没翘过。这个细节教程里写得太轻了。</blockquote>
+            <div class="who">
+              <div class="avatar">林</div>
+              <div><b>林间粘土铺</b><span>社区创作者 · 47 件微缩作品</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-stack">
+          <article class="card spotlight">
+            <img src="https://picsum.photos/seed/tina-clay-window/720/420" width="720" height="420" loading="lazy" alt="微缩旧书店窗台，木质窗框与摆放的小书模型" style="object-fit:cover">
+            <div class="body">
+              <div class="meta"><span class="pill clay">微缩场景</span><span>11月1日</span></div>
+              <h3><a href="/#deep">旧书店窗台的 1:24 复刻：从量尺到罩染的 9 天</a></h3>
+              <p>窗框用 0.8 毫米椴木条，玻璃换 0.3 毫米亚克力。第 5 天遇到窗台横梁下塌，用 1.2 毫米铜丝内衬解决，重量增加 6 克，整体不变形。</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="meta"><span class="pill">上色</span><span>11月4日</span></div>
+            <h3><a href="/#guide">丙烯罩染与粉彩干扫，哪个更能留住黏土肌理</a></h3>
+            <p>同一块 3 厘米×3 厘米软陶基底分左右两半处理。丙烯层厚 0.05 毫米时细节丢失约 15%，粉彩干扫保留纹理但附着力差，需要哑光定画液两层。</p>
+          </article>
+
+          <article class="card" id="factCheck">
+            <h3>可核对清单：烘烤前必须确认的 5 项</h3>
+            <ol style="font-size:14px;color:var(--ink-2);padding-left:1.2em;margin:0">
+              <li>烤箱实际温度与旋钮刻度差（本次实测偏差 +8℃）</li>
+              <li>黏土厚度是否超过 6 毫米，超过需延长 5 分钟</li>
+              <li>金属骨架是否包覆完整，裸露会氧化发黑</li>
+              <li>烤盘垫纸是否耐 150℃，普通烘焙纸在 140℃ 开始卷边</li>
+              <li>冷却是否自然降至室温，冷水急降开裂率 3/10</li>
+            </ol>
+          </article>
+        </div>
+
+        <aside class="sidebar" aria-label="侧栏导航与标签">
+          <div class="card">
+            <h3>栏目导航</h3>
+            <ul class="side-nav" id="sideNav">
+              <li><a href="/#overview">领域概览</a></li>
+              <li><a href="/#channels">分类入口</a></li>
+              <li><a href="/#deep">深度解析</a></li>
+              <li><a href="/#guide">体验指南</a></li>
+              <li><a href="/#faq">常见问题</a></li>
+              <li><a href="/#reviews">用户评论</a></li>
+              <li><a href="/#rank">工具榜单</a></li>
+              <li><a href="/#news">相关资讯</a></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>热门标签</h3>
+            <div class="tag-cloud">
+              <a href="/#channels">软陶烘烤温度</a>
+              <a href="/#channels">微缩家具制作</a>
+              <a href="/#channels">黏土开裂修复</a>
+              <a href="/#channels">1:24 比例换算</a>
+              <a href="/#channels">丙烯罩染</a>
+              <a href="/#channels">树脂黏土花瓣</a>
+              <a href="/#channels">刮片工具</a>
+              <a href="/#channels">旧书店窗台模型</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>本周工作台</h3>
+            <p style="font-size:13.5px;color:var(--ink-2)">正在做第三版 1:24 面包柜，层板改用 1 毫米椴木，抽屉滑轨换成 0.5 毫米黄铜片。预计 11月10日 出成品图。</p>
+            <a class="btn btn-ghost" href="/#news" style="margin-top:6px">看进度更新</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="section" id="channels" aria-labelledby="chTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">分类入口</span>
+        <h2 id="chTitle">按成品与工序找内容</h2>
+        <p class="sub">10 个频道，按制作流程排序；每个频道对应一类可动手的成品。</p>
+      </div>
+      <div class="channel-grid">
+        <a href="/#deep"><b>微缩建筑与窗框</b><span>椴木条、亚克力、比例换算</span></a>
+        <a href="/#guide"><b>软陶烘烤温度</b><span>130℃ 分段、150℃ 一次</span></a>
+        <a href="/#guide"><b>黏土开裂修复</b><span>回炉、补土、打磨</span></a>
+        <a href="/#overview"><b>树脂黏土花瓣</b><span>半透明、风干收缩</span></a>
+        <a href="/#guide"><b>丙烯上色与罩染</b><span>稀释、粉彩、定画液</span></a>
+        <a href="/#rank"><b>刮片与雕刻工具</b><span>6 种硬度、刀口位置</span></a>
+        <a href="/#guide"><b>1:24 比例家具</b><span>桌椅、柜体、滑轨</span></a>
+        <a href="/#overview"><b>底板防翘与找平</b><span>瓦楞纸、椴木板、预热</span></a>
+        <a href="/#reviews"><b>成品打磨与上光</b><span>砂纸目数、哑光剂</span></a>
+        <a href="/#news"><b>市集与线下工作坊</b><span>杭州、上海、报名</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="section" id="deep" aria-labelledby="deepTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">深度解析</span>
+        <h2 id="deepTitle">烘烤温度到底是 130℃ 还是 150℃，得看件厚与品牌</h2>
+        <p class="sub">用同批次软陶切片做对照，把“该烤多久”拆成可测量的变量。</p>
+      </div>
+
+      <article class="deep">
+        <div class="kicker">对比实验 · 2026-11-06 更新</div>
+        <h2>分段烘烤多花 25 分钟，换来的是更稳的边缘</h2>
+        <p class="byline">记录者：工作室主理人 · 样本：Fimo Soft 白、Cernit 米色、Premo 陶土色，各 12 片，厚 3 毫米与 6 毫米两种</p>
+
+        <p>软陶包装背面常印“110–130℃，20 分钟”。按这个走，3 毫米薄片没问题，6 毫米厚的柜门横梁却在冷却后出现 0.4 毫米的裂纹，边缘还会轻微塌陷。问题不在温度本身，而在热量到达芯部的时间差——表面已经固化，芯部还在软化状态，收缩不同步就开裂。</p>
+
+        <div class="pull">可被反驳的具体判断：6 毫米以上厚件，<strong>130℃ 三段式烘烤（10+10+10 分钟，中间开箱门 30 秒）</strong>比 150℃ 一次烤 25 分钟的成品更抗弯，代价是表面光泽下降和总耗时增加约 25 分钟。</div>
+
+        <h3>数据对比：三段烤与一次烤</h3>
+        <table class="data">
+          <caption style="caption-side:top;text-align:left;font-size:12.5px;color:var(--ink-3);padding-bottom:6px">样本各 12 片，弯曲测试用 500 克砝码下压 24 小时，记录形变量</caption>
+          <thead>
+            <tr><th>方案</th><th>总时长</th><th>平均形变量</th><th>开裂片数</th><th>表面光泽</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>130℃ 三段式</td><td>约 55 分钟</td><td>0.9 毫米</td><td>1 / 12</td><td>弱一档</td></tr>
+            <tr><td>130℃ 一次 25 分钟</td><td>约 30 分钟</td><td>1.3 毫米</td><td>3 / 12</td><td>正常</td></tr>
+            <tr><td>150℃ 一次 25 分钟</td><td>约 30 分钟</td><td>1.1 毫米</td><td>5 / 12</td><td>偏亮、微黄</td></tr>
+          </tbody>
+        </table>
+        <p>形变量相差 0.4 毫米在 1:24 的柜门上就是肉眼可见的歪斜。开裂集中在金属骨架包覆的边缘——这三组里，未包覆铜丝的样本占了 7 片开裂中的 5 片。</p>
+
+        <h3>说法差异：三种来源的推荐值</h3>
+        <p>Cernit 官网 2026 年 9 月更新的说明写的是 110℃、30 分钟，理由是低温减少发黄；Fimo 官方视频仍给 130℃；而国内多数教程直接沿用 150℃。三者其实都没错，前提不同：Cernit 偏软、发黄阈值低，150℃ 一次烤会让米色明显变暗。工作室实测 Cernit 在 150℃ 下烤 20 分钟后色差值约 4.2，130℃ 下仅 1.6。</p>
+        <div class="verdict">
+          <b>可核对的中段结论：</b>先查烤箱实测温度与旋钮刻度的偏差（本工作室烤箱偏高 8℃），再按厚度定时间：3 毫米 130℃×15 分钟即可；6 毫米以上走三段式；金属骨架必须先包覆再进烤箱。
+        </div>
+
+        <h3>规则前后变化：烤箱预热这件事</h3>
+        <p>2025 年之前的多数中文教程直接冷箱入炉。2026 年 9 月起，社区里开始有人贴出预热 10 分钟与冷箱入炉的对比图：预热后开裂率从 4/10 降到 2/10，但薄片更容易在放入瞬间受热不均卷边。工作室的做法是薄片冷箱、厚件预热，这条规则在 10 月 28 日的讨论帖里有 3 位创作者补充了不同烤箱的差异。</p>
+        <p>还有一个常被忽略的变量：冷却。冷水急降的 10 片里有 3 片开裂，自然冷却的 12 片只有 1 片。开裂位置多在厚度突变处，比如柱脚与底板连接的位置。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 体验指南 -->
+  <section class="section" id="guide" aria-labelledby="guideTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">体验指南</span>
+        <h2 id="guideTitle">第一次做 1:24 微缩书架的五步</h2>
+        <p class="sub">按工序排列，每步给可量化的判断标准，做完再进入下一步。</p>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <div>
+            <b>备料与换算</b>
+            <p>先定比例。真实书架高 180 厘米，1:24 即 7.5 厘米。椴木条选 0.8 毫米厚，板材在湿度 55% 环境下静置 24 小时再裁，避免成品后翘曲。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <b>切割与试拼</b>
+            <p>用 30 度美工刀分 3 次划切，不用一次切断。试拼时不涂胶，确认层板与侧板的缝隙小于 0.3 毫米再进入下一步。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <b>预热与涂胶</b>
+            <p>底板 80℃ 预热 3 分钟，涂白乳胶后立刻压合。压合时间 40 分钟，重物 500 克均匀压在层板上。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <b>软陶配件与烘烤</b>
+            <p>书脊、书页用 3 毫米软陶片，130℃ 烤 15 分钟。不同颜色的书页分开烤，避免深色颜料迁移到浅色片上。</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <b>罩染与上光</b>
+            <p>丙烯稀释 1:3 上色，干后粉彩干扫加深层板间隙。最后喷哑光定画液两层，间隔 20 分钟，薄喷避免积漆。</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="compare" style="margin-top:26px" aria-label="新手常见误判对照">
+        <div class="col">
+          <h3><span class="dot-a"></span>容易做错的</h3>
+          <ul>
+            <li>胶涂满整块底板，压合后四角鼓起</li>
+            <li>厚件一次 150℃ 烤完，冷却后横梁开裂</li>
+            <li>丙烯直接上原色，黏土肌理被盖住</li>
+            <li>粉彩干扫后不喷定画液，一碰就掉</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3><span class="dot-b"></span>换成这样</h3>
+          <ul>
+            <li>胶点状分布，四角各留 5 毫米不涂</li>
+            <li>6 毫米以上走 130℃ 三段式</li>
+            <li>丙烯先稀释再薄涂三遍</li>
+            <li>哑光定画液两层，间隔 20 分钟</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq" aria-labelledby="faqTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">常见问题</span>
+        <h2 id="faqTitle">开裂、发黄、沙子褪色怎么办</h2>
+        <p class="sub">答案针对材料本身，先看条件是否相同，再决定要不要照做。</p>
+      </div>
+
+      <details open>
+        <summary>软陶烤完后表面发黄，还能救吗</summary>
+        <div class="ans">
+          <p>发黄来自温度超过品牌耐受阈值，色素本身没有变化。浅色件可以用 800 目砂纸轻磨表层 0.1 毫米，再补一层薄薄的白色丙烯；深色件基本无解，只能当旧化效果用。预防比补救划算：Cernit 米色烤温控制在 110–120℃、时间 30 分钟，色差可压到 2 以内。</p>
+        </div>
+      </details>
+      <details>
+        <summary>树脂黏土花瓣干后缩小，尺寸怎么预留</summary>
+        <div class="ans">
+          <p>树脂黏土风干收缩率约 8–12%，环境湿度越高收缩越小。按 10% 预留最稳：想要成品直径 30 毫米，擀片时做 33 毫米。花瓣叠加后整体再收缩，建议先做单个测试片，称重并记录厚度，同批次按同一比例放大。</p>
+        </div>
+      </details>
+      <details>
+        <summary>微缩场景里的细沙和苔藓，上色后褪色</summary>
+        <div class="ans">
+          <p>细沙、苔藓这类多孔材料吸色后没有封闭层，光照两周就能褪一档。做法是先喷一层哑光定画液封闭孔隙，再上丙烯，干后再喷一层。苔藓更保险的方式是用染色海绵碎，比天然苔藓耐光。</p>
+        </div>
+      </details>
+      <details>
+        <summary>金属骨架烤后发黑，是氧化还是胶的问题</summary>
+        <div class="ans">
+          <p>多数是铜丝未包覆，受热氧化。软陶本身含增塑剂，接触金属后局部会变色。包覆方式是先用软陶片完全裹住铜丝，厚度不小于 0.8 毫米，再与其他部件贴合成型。已经发黑的部分只能砂纸磨掉重做。</p>
+        </div>
+      </details>
+      <details>
+        <summary>1:24 和 1:12 两种比例，工具能通用吗</summary>
+        <div class="ans">
+          <p>刀片、针形工具通用，但刮片厚度和压痕尺寸要换。1:12 的砖纹刮片间距 4 毫米，用在 1:24 上等于真砖 96 毫米，明显偏大。工作室常备两套刮片：1:24 用 2 毫米间距，1:12 用 4 毫米间距。</p>
+        </div>
+      </details>
+      <details>
+        <summary>没有烤箱，用空气炸锅烤软陶可行吗</summary>
+        <div class="ans">
+          <p>实测不稳定。空气炸锅热风强，靠近顶部加热管的位置温度比显示高 15–20℃，薄片 8 分钟就过火。如果只能用，垫两层烘焙纸，放在最下层，每 5 分钟翻面并测温，但失败率仍高于烤箱。</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="section" id="reviews" aria-labelledby="revTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">用户评论</span>
+        <h2 id="revTitle">做过的人才有的反馈</h2>
+        <p class="sub">来自工作坊学员与社区留言，保留原话，含批评意见。</p>
+      </div>
+      <div class="reviews">
+        <article class="review">
+          <header>
+            <div class="av" style="background:#b4553c">周</div>
+            <div class="who"><b>周阿满</b><span>11月6日 · 工作坊学员</span></div>
+          </header>
+          <p>按 130℃ 三段烤做了那个旧书店窗框，横梁没塌。但第 5 天的铜丝内衬这步，教程只说 1.2 毫米，我买了 1.0 毫米的，硬度差挺多，窗台还是会轻微下弯。</p>
+          <div class="stars">★★★★☆</div>
+        </article>
+        <article class="review">
+          <header>
+            <div class="av" style="background:#3f6b5e">陈</div>
+            <div class="who"><b>陈小北</b><span>11月5日 · 社区留言</span></div>
+          </header>
+          <p>丙烯稀释 1:3 这个比例我觉得不太对，我用的那管颜料就太稀，上了三遍还是透底。可能跟颜料牌子有关，教程里最好把牌子也写清楚，不然新手照做容易翻车。</p>
+          <div class="stars">★★★☆☆</div>
+        </article>
+        <article class="review">
+          <header>
+            <div class="av" style="background:#c08a2e">许</div>
+            <div class="who"><b>许知遥</b><span>11月4日 · 工作坊学员</span></div>
+          </header>
+          <p>底板预热那招真管用。之前三块瓦楞纸底板全翘了，预热 3 分钟压重物 40 分钟，这块已经放了 5 天还是平的，省了我重做的时间。</p>
+          <div class="stars">★★★★★</div>
+        </article>
+        <article class="review">
+          <header>
+            <div class="av" style="background:#6b5b52">老</div>
+            <div class="who"><b>老木工九哥</b><span>11月3日 · 社区留言</span></div>
+          </header>
+          <p>做家具二十多年了，看你们做微缩还是觉得讲究。0.3 毫米的缝隙标准对模型来说合理，但用白乳胶压合 40 分钟太短，我做实木拼板一般压 4 小时以上，模型件小可能没事，就是提一句。</p>
+          <div class="stars">★★★★☆</div>
+        </article>
+        <article class="review">
+          <header>
+            <div class="av" style="background:#8a3d2a">温</div>
+            <div class="who"><b>温野</b><span>11月2日 · 工作坊学员</span></div>
+          </header>
+          <p>空气炸锅那条我举双手同意。第一次就烤过火了，书页边缘直接褐色。后来还是买了个二手小烤箱，刻度也不准，但至少能垫温度计慢慢调。</p>
+          <div class="stars">★★★★☆</div>
+        </article>
+        <article class="review">
+          <header>
+            <div class="av" style="background:#31564b">顾</div>
+            <div class="who"><b>顾一粟</b><span>11月1日 · 社区留言</span></div>
+          </header>
+          <p>树脂黏土花瓣收缩预留 10% 我试了，但叠加五六层之后收缩更明显，最后花比预期小了一圈。感觉这个系数只适合单片，多层要再放大一点。</p>
+          <div class="stars">★★★☆☆</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工具榜单 -->
+  <section class="section" id="rank" aria-labelledby="rankTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">工具榜单</span>
+        <h2 id="rankTitle">工作室常备的 6 把刮片</h2>
+        <p class="sub">按使用频率排序，评分来自 3 位创作者连续 30 天的上手记录。</p>
+      </div>
+      <ol class="rank">
+        <li><span>软陶刮片 · 2 毫米间距 · 不锈钢</span><span class="score">9.4</span></li>
+        <li><span>五针雕刻针 · 细针 0.4 毫米</span><span class="score">9.1</span></li>
+        <li><span>木质压痕棒 · 双头圆头</span><span class="score">8.7</span></li>
+        <li><span>硅胶笔刷 · 0 号与 2 号一组</span><span class="score">8.3</span></li>
+        <li><span>亚克力擀片棒 · 长 15 厘米</span><span class="score">7.9</span></li>
+        <li><span>美工刀 · 30 度刀片替换装</span><span class="score">7.6</span></li>
+      </ol>
+      <p style="font-size:13px;color:var(--ink-3);margin-top:14px">评分说明：使用频率、刀口保持度、清洁难度三项等权，满分 10。硅胶笔刷评分偏低是因为洗不干净，不是不好用。</p>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="section" id="news" aria-labelledby="newsTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">相关资讯</span>
+        <h2 id="newsTitle">市集、比赛与材料动态</h2>
+        <p class="sub">本地活动与合作方信息，日期均在 11 月内。</p>
+      </div>
+      <div class="news-grid">
+        <article class="news-item">
+          <div class="date"><b>11.15</b><span>周六</span></div>
+          <div>
+            <h4>杭州拱墅区手作市集报名</h4>
+            <p>摊位 30 个，微缩与黏土类占 8 个，11月10日 截止。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="date"><b>11.21</b><span>周五</span></div>
+          <div>
+            <h4>软陶材料团购改期至 11月14日</h4>
+            <p>新增 Cernit 米色 227 克装，单价下调 12%。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="date"><b>11.08</b><span>今天</span></div>
+          <div>
+            <h4>工作坊本周开放 4 个名额</h4>
+            <p>内容为 1:24 书架制作，自带工具可减免材料费。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="date"><b>11.03</b><span>周二</span></div>
+          <div>
+            <h4>社区第 3 届微缩场景投票结束</h4>
+            <p>47 件作品参与，旧书店窗台类占 9 件。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="date"><b>10.30</b><span>周五</span></div>
+          <div>
+            <h4>椴木条供应商调价</h4>
+            <p>0.8 毫米规格上涨 6%，建议囤两包常用长度。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="date"><b>10.26</b><span>周一</span></div>
+          <div>
+            <h4>新开「黏土开裂修复」线上问答</h4>
+            <p>每周三晚 8 点，已收集 23 个具体问题。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关推荐 + 补充板块 -->
+  <section class="section" id="related" aria-labelledby="relTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">相关推荐</span>
+        <h2 id="relTitle">顺着这些具体条目往下做</h2>
+        <p class="sub">每条都对应一件能当天动手的成品。</p>
+      </div>
+      <div class="rec-tags">
+        <a href="/#deep">软陶烘烤温度实测表</a>
+        <a href="/#guide">1:24 比例换算速查</a>
+        <a href="/#guide">微缩家具滑轨做法</a>
+        <a href="/#guide">黏土开裂修复三步</a>
+        <a href="/#overview">树脂黏土花瓣收缩预留</a>
+        <a href="/#rank">刮片工具硬度选择</a>
+        <a href="/#guide">丙烯罩染稀释比例</a>
+        <a href="/#channels">旧书店窗台模型</a>
+        <a href="/#faq">烤箱温度校准方法</a>
+        <a href="/#channels">底板防翘预热技巧</a>
+      </div>
+
+      <div class="portal-grid" style="margin-top:30px">
+        <div class="col-stack">
+          <div class="card">
+            <h3>时间线：本次开裂修复的 6 天</h3>
+            <ul class="timeline">
+              <li><time>11月1日</time><p>发现柜门横梁 0.4 毫米裂纹，停做。</p></li>
+              <li><time>11月2日</time><p>取出金属骨架，确认铜丝裸露 3 处。</p></li>
+              <li><time>11月3日</time><p>补土填缝，60℃ 预烘 8 分钟。</p></li>
+              <li><time>11月4日</time><p>三段式回炉，130℃，各 10 分钟。</p></li>
+              <li><time>11月5日</time><p>打磨 800 目，重新罩染。</p></li>
+              <li><time>11月6日</time><p>成品弯曲测试形变 0.9 毫米，通过。</p></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-stack">
+          <div class="card">
+            <h3>说法核对：三种“厚件怎么烤”的意见</h3>
+            <ul style="font-size:14px;color:var(--ink-2);padding-left:1.2em;margin:0">
+              <li><strong>事实：</strong>Fimo 官方视频给 130℃，未区分厚度。</li>
+              <li><strong>回应：</strong>Cernit 客服 9月回复邮件称厚件建议延长至 40 分钟，不提高温度。</li>
+              <li><strong>转述：</strong>社区帖里有人说“150℃ 更快更好”，未附测试数据。</li>
+              <li><strong>推测：</strong>厚件表面先固化会锁住内部收缩，因此分段更稳——这条尚无仪器实测，只基于 12 片样本的断面对比。</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="sidebar">
+          <div class="card">
+            <h3>入门路线</h3>
+            <p style="font-size:13.5px;color:var(--ink-2)">零基础先做一块 5 厘米见方的软陶试片，练手到不开裂，再进入微缩书架。工作坊每月两次，11月14日那场还有名额。</p>
+            <a class="btn btn-primary" href="/#faq" style="margin-top:4px">看准备工作</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#b4553c"/>
+            <path d="M15 45c2.5-15 8.5-23 17-23s14.5 8 17 23" fill="none" stroke="#f6e7d8" stroke-width="4.6" stroke-linecap="round"/>
+            <circle cx="32" cy="19" r="5.2" fill="#f6e7d8"/>
+            <path d="M23 45h18" stroke="#f6e7d8" stroke-width="3.4" stroke-linecap="round"/>
+          </svg>
+          <span class="name">蒂娜muchitina</span>
+        </div>
+        <p class="position">把一块软陶的温度、厚度与返工次数记下来，让下一个做微缩场景的人少拆一次柜门。</p>
+      </div>
+      <div>
+        <h4>制作工序</h4>
+        <ul class="footer-links">
+          <li><a href="/#guide">软陶烘烤温度</a></li>
+          <li><a href="/#guide">黏土开裂修复</a></li>
+          <li><a href="/#guide">丙烯罩染</a></li>
+          <li><a href="/#rank">刮片工具</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>成品类型</h4>
+        <ul class="footer-links">
+          <li><a href="/#channels">微缩建筑与窗框</a></li>
+          <li><a href="/#channels">1:24 比例家具</a></li>
+          <li><a href="/#overview">树脂黏土花瓣</a></li>
+          <li><a href="/#overview">底板防翘找平</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul class="footer-links">
+          <li><a href="/#reviews">用户评论</a></li>
+          <li><a href="/#news">市集与工作坊</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>站内作品、工具评分与工作坊信息均为示例数据，用于展示内容结构；实际规格以材料包装为准。页脚更新时间 2026-11-08，对应正文「11月6日开裂修复记录」与「11月14日团购改期」两项。</span>
+      <span>© 2026 蒂娜muchitina · 手作黏土与微缩场景</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var toggle=document.getElementById('menuToggle');
+  var nav=document.getElementById('mainNav');
+  if(toggle&&nav){
+    toggle.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open?'true':'false');
+      toggle.setAttribute('aria-label', open?'收起导航菜单':'展开导航菜单');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* 本地搜索 */
+  var SEARCH_INDEX=[
+    {t:'软陶烘烤温度实测表',h:'/#deep',d:'130℃ 三段式与 150℃ 一次烤对比'},
+    {t:'低温软陶开裂修复',h:'/#deep',d:'三次回炉温度记录'},
+    {t:'黏土开裂修复三步',h:'/#guide',d:'补土、回炉、打磨'},
+    {t:'1:24 比例换算',h:'/#guide',d:'180 厘米书架换算为 7.5 厘米'},
+    {t:'底板防翘预热法',h:'/#guide',d:'80℃ 预热 3 分钟'},
+    {t:'微缩家具滑轨',h:'/#guide',d:'0.5 毫米黄铜片'},
+    {t:'丙烯罩染稀释比例',h:'/#guide',d:'1:3 稀释三遍薄涂'},
+    {t:'树脂黏土花瓣收缩',h:'/#faq',d:'风干收缩 8–12% 预留 10%'},
+    {t:'烤箱温度校准',h:'/#faq',d:'旋钮刻度与实测偏差 8℃'},
+    {t:'空气炸锅烤软陶',h:'/#faq',d:'不推荐，顶部温差 15–20℃'},
+    {t:'刮片工具硬度选择',h:'/#rank',d:'6 把常用刮片评分'},
+    {t:'旧书店窗台模型',h:'/#overview',d:'1:24 复刻 9 天记录'},
+    {t:'杭州手作市集',h:'/#news',d:'11月15日 拱墅区报名'},
+    {t:'软陶材料团购',h:'/#news',d:'改期至 11月14日'},
+    {t:'用户评论',h:'/#reviews',d:'工作坊学员与社区反馈'},
+    {t:'相关推荐',h:'/#related',d:'可当天动手的成品条目'}
+  ];
+  var input=document.getElementById('siteSearch');
+  var result=document.getElementById('searchResult');
+
+  function renderSearch(q){
+    if(!result) return;
+    var key=q.trim().toLowerCase();
+    result.innerHTML='';
+    if(!key){ result.classList.remove('open'); return; }
+    var hits=SEARCH_INDEX.filter(function(item){
+      return item.t.toLowerCase().indexOf(key)>-1 || item.d.toLowerCase().indexOf(key)>-1;
+    });
+    if(hits.length===0){
+      var p=document.createElement('div');
+      p.className='empty';
+      p.textContent='没有找到与「'+q+'」相关的条目，试试“烘烤”“开裂”或“比例”。';
+      result.appendChild(p);
+    }else{
+      hits.slice(0,8).forEach(function(item){
+        var a=document.createElement('a');
+        a.href=item.h;
+        a.setAttribute('role','option');
+        a.innerHTML='<strong>'+item.t+'</strong><br><span style="color:#86766d;font-size:12px">'+item.d+'</span>';
+        a.addEventListener('click',function(){ result.classList.remove('open'); });
+        result.appendChild(a);
+      });
+    }
+    result.classList.add('open');
+  }
+
+  if(input&&result){
+    input.addEventListener('input',function(){ renderSearch(input.value); });
+    input.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){ result.classList.remove('open'); input.blur(); }
+    });
+    document.addEventListener('click',function(e){
+      if(!e.target.closest('.search-box')) result.classList.remove('open');
+    });
+  }
+
+  /* 侧栏滚动高亮 */
+  var sideLinks=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets=sideLinks.map(function(a){
+    var id=a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  function highlight(){
+    var pos=window.scrollY+180;
+    var current=null;
+    targets.forEach(function(el){
+      if(el.offsetTop<=pos) current=el.id;
+    });
+    sideLinks.forEach(function(a){
+      var on=a.getAttribute('href')==='#'+current || a.getAttribute('href')==='/'+ '#'+current;
+      a.classList.toggle('active', !!current && a.getAttribute('href').indexOf('#'+current)>-1);
+    });
+  }
+
+  /* 回到顶部 */
+  var toTop=document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY>560){ toTop.classList.add('show'); }
+    else{ toTop.classList.remove('show'); }
+    highlight();
+  }
+  if(toTop){
+    toTop.addEventListener('click',function(){
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  onScroll();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"蒂娜muchitina",
+  "description":"手作黏土与微缩场景创作记录，涵盖软陶烘烤温度、黏土开裂修复、1:24 比例家具与丙烯罩染。",
+  "inLanguage":"zh-CN"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"软陶烤完后表面发黄，还能救吗",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"发黄来自温度超过品牌耐受阈值。浅色件可用 800 目砂纸轻磨表层 0.1 毫米，再补一层薄薄的白色丙烯；深色件基本无解。预防时把 Cernit 米色烤温控制在 110–120℃、时间 30 分钟，色差可压到 2 以内。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"树脂黏土花瓣干后缩小，尺寸怎么预留",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"树脂黏土风干收缩率约 8–12%，按 10% 预留最稳：想要成品直径 30 毫米，擀片时做 33 毫米。多层叠加后整体收缩更大，建议先做单个测试片并按同比例放大。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"微缩场景里的细沙和苔藓，上色后褪色",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"多孔材料吸色后没有封闭层，光照两周就能褪一档。先喷哑光定画液封闭孔隙，再上丙烯，干后再喷一层。苔藓可用染色海绵碎替代，比天然苔藓耐光。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"金属骨架烤后发黑，是氧化还是胶的问题",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"多数是铜丝未包覆受热氧化。包覆方式为用软陶片完全裹住铜丝，厚度不小于 0.8 毫米，再与其他部件贴合成型。已发黑部分只能砂纸磨掉重做。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"1:24 和 1:12 两种比例，工具能通用吗",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"刀片与针形工具通用，刮片厚度和压痕尺寸要换。1:12 的砖纹刮片间距 4 毫米，用在 1:24 上等于真砖 96 毫米，明显偏大。建议常备两套刮片。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"没有烤箱，用空气炸锅烤软陶可行吗",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"实测不稳定。空气炸锅热风强，靠近顶部加热管处温度比显示高 15–20℃，薄片 8 分钟就过火。若必须使用，垫两层烘焙纸放最下层，每 5 分钟翻面测温，失败率仍高于烤箱。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+                                         </html>
